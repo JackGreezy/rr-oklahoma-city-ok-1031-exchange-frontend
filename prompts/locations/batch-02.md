@@ -27,3 +27,4 @@ Generate SEO optimized content for 6 locations near Oklahoma City, OK that help 
 ### 4. Example Capability
 { "disclaimer":"Example of the type of engagement we can handle", "location":"[Location, OK]", "situation":"...", "ourApproach":"...", "expectedOutcome":"..." }
 
+

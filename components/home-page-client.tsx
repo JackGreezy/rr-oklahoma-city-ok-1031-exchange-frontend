@@ -89,8 +89,8 @@ type LeadFormValues = {
   message: string;
 };
 
-const phoneNumber = "(405) 433-1031";
-const phoneHref = "tel:+14054331031";
+const phoneNumber = "(832) 743-1964";
+const phoneHref = "tel:+18327431964";
 const okTaxTransferUrl =
   "https://oklahoma.gov/tax/help-center/oklahoma-businesses/real-estate-excise-tax.html";
 const hasStaffedOffice = false;
@@ -304,10 +304,10 @@ export default function HomePageClient() {
       "@type": "Organization",
       name: "1031 Exchange Oklahoma City",
       url: "https://www.1031exchangeoklahomacity.com/",
-      telephone: "+14054331031",
+      telephone: "+18327431964",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "100 Park Avenue Suite 500",
+        streetAddress: "701 N Broadway Ave",
         addressLocality: "Oklahoma City",
         addressRegion: "OK",
         postalCode: "73102",

@@ -36,3 +36,4 @@ Generate SEO optimized content for 8 services in Oklahoma City, OK. The site pri
 ### 6. Example Capability
 { "disclaimer":"Example of the type of engagement we can handle", "serviceType":"[Service Name]", "location":"Oklahoma City, OK", "scope":"...", "clientSituation":"...", "ourApproach":"...", "expectedOutcome":"...", "contactCTA":"Contact us to discuss your situation in Oklahoma City, OK. We can share references upon request." }
 
+

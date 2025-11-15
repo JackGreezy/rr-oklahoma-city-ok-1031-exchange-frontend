@@ -42,7 +42,7 @@ async function sendEmailViaSendGrid(formData: any) {
 
   const msg = {
     to: process.env.SENDGRID_TO_EMAIL,
-    from: process.env.SENDGRID_FROM_EMAIL || "noreply@1031exchangeoklahomacity.com",
+    from: process.env.SENDGRID_FROM_EMAIL || "info@1031exchangeoklahomacity.com",
     subject: `New 1031 Exchange Lead: ${formData.name}`,
     text: `
 New Lead Form Submission

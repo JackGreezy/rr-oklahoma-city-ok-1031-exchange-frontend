@@ -110,3 +110,4 @@ Even though the UI scaffolding is still slim, bake in consistent usage so future
 
 This spec should plug straight into a Cursor custom command. It stays model-agnostic, relies only on existing repo conventions, never starts a dev server, and keeps the public assets ready for the layouts `/rr-1031-prompt-3` will introduce.
 
+

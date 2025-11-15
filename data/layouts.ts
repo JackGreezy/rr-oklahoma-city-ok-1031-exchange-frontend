@@ -147,3 +147,4 @@ export const assignments: LayoutAssignments = {
   locations: assignLayouts(locationsData, locationVariants),
 };
 
+

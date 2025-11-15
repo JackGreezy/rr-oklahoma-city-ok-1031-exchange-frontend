@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, SITE_URL, MAP_CENTER } from "@/lib/config";
+import { SITE_NAME, SITE_URL, OFFICE_ADDRESS } from "@/lib/config";
 import Breadcrumbs from "@/components/breadcrumbs";
 import ContactForm from "./contact-form";
 
@@ -44,16 +44,16 @@ export default async function ContactPage({ searchParams }: Props) {
 
           <div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-              <h2 className="text-xl font-semibold text-slate-900">Office Location</h2>
+              <h2 className="text-xl font-semibold text-slate-900">Location</h2>
               <div className="mt-4 aspect-video w-full overflow-hidden rounded-lg bg-slate-100">
                 <iframe
                   width="100%"
                   height="100%"
                   frameBorder="0"
                   style={{ border: 0 }}
-                  src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyDummyKey'}&q=${MAP_CENTER.lat},${MAP_CENTER.lng}&zoom=12`}
+                  src={`https://www.google.com/maps?q=${encodeURIComponent(OFFICE_ADDRESS)}&output=embed&zoom=15`}
                   allowFullScreen
-                  title="Map of Oklahoma City"
+                  title={`Map showing ${OFFICE_ADDRESS}`}
                 />
               </div>
             </div>

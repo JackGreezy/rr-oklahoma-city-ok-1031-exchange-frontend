@@ -32,3 +32,4 @@
 ### Footer Disclosure
 Disclosure: This site routes inquiries to our chosen fulfillment partner for 1031 exchange advisory and property identification support.
 
+

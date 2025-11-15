@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE_NAME, PHONE_NUMBER, PHONE_HREF, EMAIL, OFFICE_HOURS, OFFICE_ADDRESS, MAP_CENTER } from "@/lib/config";
+import { SITE_NAME, PHONE_NUMBER, PHONE_HREF, EMAIL, OFFICE_HOURS, OFFICE_ADDRESS } from "@/lib/config";
 import { servicesData } from "@/data/services";
 import { locationsData } from "@/data/locations";
 
@@ -66,6 +66,7 @@ export default function Footer() {
                   {EMAIL}
                 </a>
               </li>
+              <li>{OFFICE_ADDRESS}</li>
               <li>{OFFICE_HOURS}</li>
               <li>
                 <Link href="/contact" className="hover:text-[#1E3A8A]">
@@ -107,7 +108,21 @@ export default function Footer() {
         </div>
         
         <div className="mt-12 border-t border-slate-200 pt-8">
-          <p className="text-center text-xs text-slate-500">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-base font-semibold text-slate-900 mb-4">Location</h3>
+            <div className="aspect-video w-full overflow-hidden rounded-xl bg-slate-100 shadow-sm">
+              <iframe
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                style={{ border: 0 }}
+                src={`https://www.google.com/maps?q=${encodeURIComponent(OFFICE_ADDRESS)}&output=embed&zoom=15`}
+                allowFullScreen
+                title={`Map showing ${OFFICE_ADDRESS}`}
+              />
+            </div>
+          </div>
+          <p className="mt-8 text-center text-xs text-slate-500">
             This site helps investors identify potential replacement properties for Section 1031 exchanges. This site is not a Qualified Intermediary, law firm, broker, or CPA. Users should consult a Qualified Intermediary and tax advisor before acting.
           </p>
           <p className="mt-4 text-center text-xs text-slate-500">

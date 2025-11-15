@@ -77,3 +77,4 @@ export function searchLocations(query: string): Location[] {
   });
 }
 
+
