@@ -1,12 +1,7 @@
-import { NextResponse } from "next/server";
-import sgMail from "@sendgrid/mail";
+import { NextRequest, NextResponse } from "next/server";
+import { getBrand } from '@/lib/brand';
+import { sendCustomerConfirmation, sendInternalNotifications } from '@/lib/email/sendgrid';
 
-// Initialize SendGrid
-if (process.env.SENDGRID_API_KEY) {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-}
-
-// Verify Turnstile token
 async function verifyTurnstileToken(token: string): Promise<boolean> {
   if (!process.env.TURNSTILE_SECRET_KEY) {
     console.warn("TURNSTILE_SECRET_KEY not set, skipping verification");
@@ -33,44 +28,6 @@ async function verifyTurnstileToken(token: string): Promise<boolean> {
   }
 }
 
-// Send email via SendGrid
-async function sendEmailViaSendGrid(formData: any) {
-  if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_TO_EMAIL) {
-    console.warn("SendGrid not configured, skipping email");
-    return;
-  }
-
-  const msg = {
-    to: process.env.SENDGRID_TO_EMAIL,
-    from: process.env.SENDGRID_FROM_EMAIL || "info@1031exchangeoklahomacity.com",
-    subject: `New 1031 Exchange Lead: ${formData.name}`,
-    text: `
-New Lead Form Submission
-
-Name: ${formData.name}
-Company: ${formData.company || "N/A"}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Project Type: ${formData.projectType}
-Timeline: ${formData.timeline || "N/A"}
-Details: ${formData.details || "N/A"}
-    `.trim(),
-    html: `
-      <h2>New 1031 Exchange Lead</h2>
-      <p><strong>Name:</strong> ${formData.name}</p>
-      <p><strong>Company:</strong> ${formData.company || "N/A"}</p>
-      <p><strong>Email:</strong> ${formData.email}</p>
-      <p><strong>Phone:</strong> ${formData.phone}</p>
-      <p><strong>Project Type:</strong> ${formData.projectType}</p>
-      <p><strong>Timeline:</strong> ${formData.timeline || "N/A"}</p>
-      <p><strong>Details:</strong> ${formData.details || "N/A"}</p>
-    `.trim(),
-  };
-
-  await sgMail.send(msg);
-}
-
-// Send to Zapier webhook
 async function sendToZapier(formData: any) {
   if (!process.env.ZAPIER_WEBHOOK_URL) {
     console.warn("Zapier webhook not configured, skipping");
@@ -103,11 +60,46 @@ export async function POST(request: Request) {
       }
     }
 
-    // Send email via SendGrid
-    await sendEmailViaSendGrid(formData);
-
     // Send to Zapier webhook
-    await sendToZapier(formData);
+    await sendToZapier({
+      ...formData,
+      timestamp: new Date().toISOString(),
+    });
+
+    // Send emails via SendGrid template
+    const brand = getBrand();
+    const lead = {
+      name: String(formData.name || ''),
+      email: String(formData.email || ''),
+      phone: formData.phone ? String(formData.phone).replace(/\D/g, '') : undefined,
+      phone_plain: formData.phone ? String(formData.phone).replace(/\D/g, '') : undefined,
+      projectType: String(formData.projectType || '1031 Exchange Project'),
+      property: formData.property ? String(formData.property) : undefined,
+      estimatedCloseDate: formData.estimatedCloseDate ? String(formData.estimatedCloseDate) : undefined,
+      city: formData.city ? String(formData.city) : undefined,
+      company: formData.company ? String(formData.company) : undefined,
+      timeline: formData.timeline ? String(formData.timeline) : undefined,
+      message: formData.message ? String(formData.message) : (formData.details ? String(formData.details) : undefined),
+    };
+
+    const brandWithDate = {
+      ...brand,
+      submitted_date: new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })
+    };
+
+    try {
+      await Promise.all([
+        sendCustomerConfirmation(brandWithDate, lead),
+        sendInternalNotifications(brandWithDate, lead),
+      ]);
+      console.log('SendGrid emails sent successfully to:', formData.email);
+    } catch (error) {
+      console.error("SendGrid email failed", error);
+    }
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
@@ -115,4 +107,3 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Failed to process request" }, { status: 500 });
   }
 }
-
