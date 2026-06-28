@@ -49,7 +49,7 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-slate-900">Disclaimer</h2>
               <p className="mt-4 text-base text-slate-700">
-                The materials on {SITE_NAME}'s website are provided on an 'as is' basis. {SITE_NAME} makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+                The materials on {SITE_NAME}'s website are provided on an 'as is' basis. {SITE_NAME} makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement or other violation of rights.
               </p>
               <p className="mt-4 text-base text-slate-700">
                 This website provides educational information about 1031 exchanges. This site is not a Qualified Intermediary, law firm, broker, or CPA. Users should consult a Qualified Intermediary and tax advisor before acting on any information provided.
