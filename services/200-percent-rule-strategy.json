@@ -1,0 +1,58 @@
+{
+ "slug": "200-percent-rule-strategy",
+ "taxonomy": "services",
+ "title": "200% Rule Strategy",
+ "name": "200% Rule Strategy",
+ "metaTitle": "200% Rule Strategy in Oklahoma City, OK",
+ "metaDescription": "200% identification strategy for Oklahoma City investors splitting one exchange into several smaller replacement buildings without blowing the ceiling.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Anyone who has managed one large building and then taken on three smaller ones knows the workload does not shrink, it just spreads out across more roofs, more mechanical rooms, and more tenants to keep track of. The 200% rule lets an investor make that same trade with exchange proceeds, naming more replacement candidates than the standard three-property limit allows, as long as the combined value stays inside a hard ceiling. Getting the strategy right means understanding both the value math and the operational reality of taking on several buildings at once instead of one.</p>"
+  },
+  {
+   "heading": "The Math Behind the 200% Ceiling",
+   "html": "<p>Add up the fair market value of every property on the identification list, and it cannot exceed twice what the relinquished property sold for. There is no separate test for how reasonable the list looks or how likely each candidate is to actually close, only that single total. Debt on the replacement candidates does not reduce the number either, a heavily leveraged building still counts at its full value, which trips up investors who assume financing lowers their exposure against the ceiling.</p>"
+  },
+  {
+   "heading": "Why Splitting One Building Into Several Makes Sense Here",
+   "html": "<p>An investor exiting a large industrial building near the I-35 and I-40 interchange and moving into a mix of smaller flex and distribution properties along the same corridors, rather than one equivalent replacement, is a common reason to reach for the 200% approach in this market. So is an owner leaving a single downtown energy-sector office floor plate and identifying several smaller office or medical suites instead, since no one candidate matches the relinquished value on its own. Each of those replacement scenarios trades the simplicity of managing one building for the diversification of managing several, which is a tradeoff worth thinking through before the identification list is finalized rather than after the closings start landing.</p>"
+  },
+  {
+   "heading": "Where the Split Gets Complicated on the Ground",
+   "html": "<ul><li>each additional building means its own roof age, HVAC condition, and deferred maintenance history to verify before closing</li><li>a stretch candidate added late in the window without rechecking the running total</li><li>relying on a listing price instead of a defensible appraised value for a smaller building</li><li>assuming every candidate's mechanical systems are in comparable condition without inspecting each one</li><li>underestimating how many separate closings have to land inside the same 180-day period</li></ul>"
+  },
+  {
+   "heading": "The 95% Rule Waiting Behind a Blown Ceiling",
+   "html": "<p>If the identified list ever exceeds the 200% total, the fallback is the 95% rule, which requires actually acquiring 95% of everything named, rather than a partial share of it. That is a far stricter outcome than most investors intend, so the practical target is building the list with enough cushion that a single valuation surprise, on a distribution building whose roof turns out to need replacement sooner than assumed, does not force a scramble into the stricter rule.</p>"
+  },
+  {
+   "heading": "Keeping the Running Total Honest Through Day 45",
+   "html": "<p>A workable 200% list means pricing every candidate conservatively, confirming values with a broker or appraiser rather than an asking price, and rechecking the combined total every time a property is added, dropped, or its estimated value changes. The investor's tax advisor or qualified intermediary should see that running total well before day 45, not after the list has already been filed, since there is no window to correct it afterward. The same discipline applies to the operational side of the decision, since an investor who has already lined up who will inspect each candidate building and confirm its condition rarely gets caught flat-footed when the final total needs to be locked down.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Why would an Oklahoma City investor split one exchange across several buildings instead of one?",
+   "a": "It usually comes down to diversifying out of a single large industrial or office holding into smaller assets that spread both risk and hands-on management differently. The 200% rule is what makes naming more than three candidates possible when the exchange is structured that way."
+  },
+  {
+   "q": "Does financing on the replacement buildings lower their value against the 200% ceiling?",
+   "a": "No. The ceiling is calculated on full fair market value, not equity, so a financed building counts at its complete value the same as an unleveraged one. Investors who assume leverage buys them room under the cap are usually surprised when the running total is recalculated."
+  },
+  {
+   "q": "What happens if my identified properties add up to more than 200% of the relinquished value?",
+   "a": "The list becomes invalid for anything not actually purchased, and the only remaining path is the 95% rule, which requires closing on nearly all of it. That is a much harder standard than most investors expect when an oversized list is first assembled."
+  },
+  {
+   "q": "Should each replacement building get its own inspection before it goes on the identification list?",
+   "a": "Yes, treating every candidate the same way you would treat a single large replacement is what keeps the value estimate defensible. A missed roof or mechanical issue on one of several smaller buildings can push the combined total past the ceiling just as easily as one bad number on a single property."
+  },
+  {
+   "q": "Can I add a backup candidate late in the 45-day window under the 200% rule?",
+   "a": "Only if there is enough cushion left under the ceiling to absorb it without recalculating everything else on the list. Adding a stretch property without rechecking the running total is one of the more common ways a workable list gets pushed over the limit."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 861
+}

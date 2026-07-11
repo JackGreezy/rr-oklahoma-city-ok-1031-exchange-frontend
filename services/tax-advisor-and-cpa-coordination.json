@@ -1,0 +1,58 @@
+{
+ "slug": "tax-advisor-and-cpa-coordination",
+ "taxonomy": "services",
+ "title": "Tax Advisor and CPA Coordination",
+ "name": "Tax Advisor and CPA Coordination",
+ "metaTitle": "Tax Advisor and CPA Coordination in Oklahoma City, OK",
+ "metaDescription": "We route closing statements, rent rolls, and debt schedules to your tax advisor on your Oklahoma City 1031 timeline, without giving tax advice ourselves.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>We don't give tax advice, and we tell every Oklahoma City investor that up front, but we do make sure your CPA or tax advisor has everything they need at the moment they need it, not three weeks after closing when it's harder to fix. Coordination means the property documentation, the closing statement, and the basis detail land on your advisor's desk on a schedule that matches your exchange timeline, not the property's own closing calendar.</p>"
+  },
+  {
+   "heading": "What Your Tax Advisor Needs Before You Even Identify a Property",
+   "html": "<p>Your advisor generally wants to see your relinquished property's basis and depreciation schedule, your expected reinvestment amount, and whether you're considering diversifying across multiple replacement assets, since that affects which identification rule fits your deal. Any existing boot exposure from debt paydown on the relinquished property should also be on their radar before you start sourcing replacement candidates, and we ask for that information up front rather than discovering it midway through sourcing.</p>"
+  },
+  {
+   "heading": "Documents We Route to Your CPA Without You Having to Chase Them",
+   "html": "<p>Rather than leaving you to collect and forward paperwork under deadline pressure, we route the following directly:</p><ul><li>Closing statement from the relinquished property sale</li><li>Qualified intermediary's exchange agreement and fee schedule</li><li>Replacement property closing statement once available</li><li>Rent roll and T12 financial detail used in underwriting the replacement asset</li><li>Debt schedule for both relinquished and replacement property</li><li>Any seller credits or prorations that could affect basis calculation</li></ul><p>We keep a running log of what's been sent and when, so nothing falls through between your advisor's inbox and ours.</p>"
+  },
+  {
+   "heading": "Coordinating Timing So Your Advisor Isn't Working Backward",
+   "html": "<p>We align document delivery with your 45-day and 180-day milestones so your advisor reviews basis and boot exposure while there's still time to adjust the deal, not after signatures are already in place. That timing difference is often what separates a clean exchange from one that needs corrective work after the fact, and it costs nothing extra to build the schedule that way from the start.</p>"
+  },
+  {
+   "heading": "Boot: Why Debt and Cash Details Matter More Than People Expect",
+   "html": "<p>Boot generally shows up when a replacement property carries less debt than the one you sold, or when you receive cash back without reinvesting it, and either one can create a taxable event even inside an otherwise valid exchange. We flag any structural element that could create boot before you commit to a property, and we recommend you confirm the exact tax treatment with your own advisor rather than relying on our read of the deal alone.</p><p>This comes up often with Oklahoma City investors moving from a heavily leveraged property into an all-cash replacement purchase, since the debt reduction itself can create boot even when the price and cash invested look favorable on their own.</p>"
+  },
+  {
+   "heading": "Where This Handoff Fits Alongside Your Qualified Intermediary and Form 8824 Work",
+   "html": "<p>Final tax return reporting, including Form 8824 preparation, is a separate coordination point handled closer to filing season. This page covers the ongoing document handoff to your advisor throughout the transaction, which is what makes that later filing work go smoothly instead of becoming a scramble for missing paperwork right before a deadline.</p><p>We treat the two as connected but distinct jobs, the way you'd separate a service call from the annual inspection it eventually feeds into, so nothing about the filing work depends on documents that should have already been sent months earlier.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do you prepare my tax return or give me tax advice directly?",
+   "a": "No. We coordinate document flow and timing with your tax advisor, but all tax positions and filing decisions come from your own CPA or tax advisor, and we recommend you confirm every structural detail with them directly rather than treating our summary as tax guidance of any kind."
+  },
+  {
+   "q": "When should my CPA first see the relinquished property closing statement?",
+   "a": "As soon as it's available, ideally within days of closing rather than waiting until the replacement property is also finalized. Early review gives your advisor time to flag boot exposure or basis questions while you can still act on them before the deal is fully locked, rather than after the fact."
+  },
+  {
+   "q": "What is boot, in plain terms, and why does debt matter?",
+   "a": "Boot generally refers to cash or a debt reduction you receive in the exchange that isn't reinvested, and it can create a taxable gain even when the overall exchange otherwise qualifies. Confirm the specific calculation with your tax advisor, since it depends on the full structure of your transaction, including any prorations or credits applied at closing."
+  },
+  {
+   "q": "Can my CPA request different documentation than what you routinely send?",
+   "a": "Yes, our standard document routing covers the most common items, but we're glad to pull additional detail your advisor specifically asks for, whether that's a more detailed debt schedule, additional lease files, or a breakdown of a specific closing cost. We'd rather send an extra document than have your advisor working from an incomplete picture of the transaction and its financing terms."
+  },
+  {
+   "q": "How does diversifying across multiple replacement properties change what my advisor needs to review?",
+   "a": "Splitting basis across two or three properties means your advisor needs to review each property's closing statement and debt structure individually, and it may change which identification rule applies to your exchange. We flag that early so your advisor isn't reviewing a moving target as sourcing continues, and we send updated debt schedules whenever a candidate on your list changes."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 850
+}

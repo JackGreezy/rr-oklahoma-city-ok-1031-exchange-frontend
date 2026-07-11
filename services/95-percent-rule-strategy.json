@@ -1,0 +1,58 @@
+{
+ "slug": "95-percent-rule-strategy",
+ "taxonomy": "services",
+ "title": "95% Rule Strategy",
+ "name": "95% Rule Strategy",
+ "metaTitle": "95% Rule Strategy in Oklahoma City, OK",
+ "metaDescription": "95% rule coordination for Oklahoma City investors closing on nearly every identified replacement property inside one 180-day window.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Closing on one building against a hard deadline is stressful enough. The 95% rule asks an investor to close on almost every property they named, sometimes four or five buildings at once, inside the same window. If you have ever tried to schedule inspections on multiple sites in the same week, you already understand why this is the harder path, and why it takes real coordination rather than good intentions to pull off.</p>"
+  },
+  {
+   "heading": "What the Rule Actually Demands",
+   "html": "<p>The 95% rule lets an investor identify an unlimited number of replacement candidates by value, but only if they end up actually acquiring at least 95% of the combined fair market value of everything named. It exists mainly as a fallback for investors whose identified list exceeded the 200% ceiling, since it is the only remaining path once that cap is blown. Missing the 95% threshold by even a small margin can disqualify the entire exchange, and the shortfall is measured against the properties that fell through rather than against the exchange as a whole. That single-number test is what makes the rule so unforgiving compared to the three-property or 200% approaches, where one deal falling apart does not automatically threaten every other closing.</p>"
+  },
+  {
+   "heading": "Why Investors End Up Choosing This Path",
+   "html": "<p>An owner exiting a large downtown office holding and casting a wide net across several smaller replacement candidates, from flex space along the I-40 corridor to office suites near the energy district, sometimes ends up with a list that already exceeds 200% before realizing it. Rather than trimming the list and losing options, some investors deliberately commit to the 95% standard from the start, accepting that nearly everything named has to close. That is a very different posture from an investor who backs into the 95% rule by accident after a list grows past the 200% ceiling without anyone rechecking the total along the way.</p>"
+  },
+  {
+   "heading": "Running Near-Simultaneous Closings on Several Buildings",
+   "html": "<p>Closing on four buildings inside the same 180-day period means four separate title searches, four sets of engineering or condition reports, and four schedules that all have to land before the deadline without any one of them dragging the rest. A distribution property near Tinker Air Force Base with a specialized power inspection pending cannot hold up the funding on a downtown office closing that is otherwise ready. Sequencing which building closes first, and building slack into the schedule for whichever one is most likely to hit a snag, is what keeps the whole group inside the 95% threshold. A facilities-trained coordinator who has already lined up which vendor is inspecting which building, and in what order, has a real advantage over a team scrambling to figure that out once the deadline is already close.</p>"
+  },
+  {
+   "heading": "Where Multi-Building Coordination Breaks Down",
+   "html": "<ul><li>one property's engineering report comes back late and stalls the whole closing sequence</li><li>a lender's property condition assessment queue cannot service four buildings on the same timeline</li><li>a tenant estoppel on one candidate arrives with exceptions that need legal review before funding</li><li>title issues on a smaller property get deprioritized behind the larger deal and run out of time</li><li>the investor underestimates how much staff time it takes to manage several closings in parallel</li></ul>"
+  },
+  {
+   "heading": "Deciding Whether 95% Is Worth Attempting",
+   "html": "<p>The 95% rule works when an investor has the bandwidth, or the right team, to manage several closings at once without letting any single building's problems sink the whole exchange. Investors who would rather keep the process simpler are usually better served staying under the 200% ceiling and using the three-property or 200% rules instead, where a single deal falling through does not put the entire exchange at risk. There is no wrong answer here, only a mismatch between the strategy chosen and the bandwidth actually available to execute it.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What percentage of my identified properties actually has to close under the 95% rule?",
+   "a": "At least 95% of the combined fair market value of everything on the identification list has to be acquired, not 95% of the number of properties. Falling short on value, even by naming one property that never closes, can jeopardize the whole exchange."
+  },
+  {
+   "q": "Why would an investor use the 95% rule instead of staying under the 200% ceiling?",
+   "a": "Usually because the identification list was already built wide, across several smaller replacement buildings, before the 200% cap was recalculated and found to be exceeded. At that point the 95% rule is the only remaining path to keep the exchange valid."
+  },
+  {
+   "q": "Can I close on the buildings in any order I choose under the 95% rule?",
+   "a": "Yes, but the order should be chosen deliberately, closing the buildings most likely to hit inspection or title delays earlier in the window so there is still time to resolve issues before day 180."
+  },
+  {
+   "q": "What happens if I fall just short of the 95% threshold?",
+   "a": "Falling short disqualifies the exchange as originally structured, meaning gain may be recognized on the relinquished property sale even though most of the identified list actually closed. There is no partial credit for getting close to the threshold."
+  },
+  {
+   "q": "Is the 95% rule harder to manage with buildings in different submarkets?",
+   "a": "It can be, since buildings in different corridors often have different vendor availability for inspections and different lender review timelines. Coordinating those schedules early, rather than assuming they will align naturally, is the main practical challenge."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 860
+}

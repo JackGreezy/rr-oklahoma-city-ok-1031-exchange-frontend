@@ -1,0 +1,58 @@
+{
+ "slug": "exchange-documentation-assembly",
+ "taxonomy": "services",
+ "title": "Exchange Documentation Assembly",
+ "name": "Exchange Documentation Assembly",
+ "metaTitle": "Exchange Documentation Assembly in Oklahoma City, OK",
+ "metaDescription": "Assembling the full exchange documentation set for Oklahoma City property, from identification paperwork to the building records buyers actually ask for.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Every exchange has a tax file and a building file, and the second one is usually the one that goes missing under deadline pressure. Warranty documents, service contracts, and inspection reports live in different drawers than the closing paperwork, and pulling both together on the same timeline is where a lot of exchanges lose time they didn't budget for. Treating the two files as one connected assembly job, rather than two separate people working from two separate lists, is what keeps an Oklahoma City exchange from stalling in the final week over a document nobody thought to request until it was already overdue.</p>"
+  },
+  {
+   "heading": "What the Documentation Set Actually Includes",
+   "html": "<p>A complete exchange file covers the exchange agreement with the qualified intermediary, the written 45-day identification, purchase and sale contracts for both properties, closing statements, and eventually Form 8824 for the tax return. That is the tax and legal half. The other half, title work, surveys, and any lender-required reports, has to be assembled on the same schedule but often gets treated as a separate workstream that nobody owns until closing week. Assigning one person ownership over the full checklist, rather than letting the tax side and the building side each assume the other is covering it, is a small change that prevents most of the last-minute scrambling.</p>"
+  },
+  {
+   "heading": "The Building Paper Trail That Gets Overlooked",
+   "html": "<p>Roof warranty documents, HVAC service contracts, elevator maintenance logs, and any recent engineering or property condition reports are exactly the records a facilities manager would have on hand but a tax preparer would not think to request. Buyers and lenders increasingly ask for this material before closing, and a building that has changed property management companies over the years sometimes has gaps in that history that take real time to track down or reconstruct. A downtown building near Bricktown that switched management firms twice in the last decade, for instance, may have three partial sets of service records instead of one complete file, and stitching those together is a task best started the day the property goes on the market, not the week before closing.</p>"
+  },
+  {
+   "heading": "Building a Checklist Around Two Deadlines, Not One",
+   "html": "<p>The 45-day identification and the 180-day closing are two separate deadlines with two different documentation needs. The identification package needs a clean written description of each candidate property. The closing package needs everything else, financial, legal, and building-specific, ready before the funding date. Treating these as one undifferentiated pile of paperwork instead of two sequenced checklists is a common reason documents get chased at the last minute.</p>"
+  },
+  {
+   "heading": "Where Assembly Falls Apart Under Time Pressure",
+   "html": "<ul><li>service contracts and warranty documents scattered across former property managers or vendors</li><li>a written identification that describes a property vaguely instead of unambiguously</li><li>closing statements that arrive too close to funding to catch a boot calculation error</li><li>tenant estoppels requested too late to allow for a second follow-up if one comes back incomplete</li><li>Form 8824 support documents that should have been gathered at closing instead pulled together months later</li></ul>"
+  },
+  {
+   "heading": "Handing a Clean File to the Qualified Intermediary",
+   "html": "<p>The qualified intermediary needs the exchange agreement, identification notice, and closing documents in a form that supports the exchange without gaps, and a well-organized file makes that review faster on both ends. Keeping building records in the same assembly process, rather than as an afterthought once the deal is under contract, means fewer surprises when a buyer, lender, or the QI asks a question the week before funding. A file assembled this way also tends to hold up better months later, when Form 8824 needs the same numbers pulled a second time for the tax return.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What building records should I start gathering as soon as I list a property for exchange?",
+   "a": "Roof warranty documents, HVAC and elevator service contracts, recent engineering or condition reports, and any tenant lease files are worth pulling early, since these often take longer to locate than financial paperwork if the property has changed management companies."
+  },
+  {
+   "q": "Is Form 8824 part of the closing documentation or handled separately later?",
+   "a": "Form 8824 is filed with the tax return for the year of the exchange, so it comes after closing, but the numbers it requires, including boot and basis calculations, should be pulled together from the closing statement while the details are still fresh."
+  },
+  {
+   "q": "Who is responsible for assembling the written 45-day identification?",
+   "a": "The investor is responsible for delivering it, though most work with their exchange team to draft language precise enough to unambiguously describe each candidate property. A vague or incomplete description can invalidate the identification even if the intent was clear."
+  },
+  {
+   "q": "Do lenders on the replacement property usually ask for building-specific records before closing?",
+   "a": "Often, yes, particularly a property condition assessment or recent engineering report on larger commercial buildings. Having these ready before the lender asks avoids a late scramble that can threaten the closing date and the exchange deadline riding on it."
+  },
+  {
+   "q": "What happens if a service contract or warranty document can't be located before closing?",
+   "a": "A missing document doesn't necessarily stop the exchange, but it can affect the buyer's due diligence confidence or the value the property carries in a boot calculation. Flagging gaps early gives more options than discovering them during closing week, including enough time to reconstruct a service history from vendor invoices if the original paperwork truly cannot be located anywhere at all."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 854
+}

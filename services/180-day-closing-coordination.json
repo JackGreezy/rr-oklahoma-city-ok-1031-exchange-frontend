@@ -1,0 +1,58 @@
+{
+ "slug": "180-day-closing-coordination",
+ "taxonomy": "services",
+ "title": "180-Day Closing Coordination",
+ "name": "180-Day Closing Coordination",
+ "metaTitle": "180-Day Closing Coordination in Oklahoma City, OK",
+ "metaDescription": "Closing coordination for the 180-day exchange window on Oklahoma City replacement property, from estoppels and engineering reports to funding day.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The 180-day clock does not care that your roof warranty inspector is booked out three weeks or that a tenant needs forty-eight hours' notice before anyone walks the mechanical room. If you run buildings for a living, you already know how a closing date and a building's actual operating calendar can pull against each other. Coordinating the two so the exchange still closes on time is the job.</p>"
+  },
+  {
+   "heading": "What Actually Starts and Stops the Clock",
+   "html": "<p>The 180-day period begins the day after the relinquished property sells and runs on calendar days, weekends and holidays included, with no extension for a slow title search or a delayed lender inspection. It ends 180 days later or on the due date of the investor's tax return for that year, whichever comes first, which is why an exchange opened late in the year sometimes has less than the full 180 days in practice. Everything downstream, including how you sequence building access and reports, has to fit inside that fixed window.</p>"
+  },
+  {
+   "heading": "Running the Timeline Against a Working Building",
+   "html": "<p>Say the replacement is a downtown office building near the Devon Energy Center with three floors of active energy-sector tenants. The buyer's engineering firm wants roof access, the elevator contractor needs a service window to pull maintenance logs, and someone has to confirm the chiller's last inspection date before the lender will sign off. None of that can happen on the tenants' schedule alone, and none of it can happen so late that it threatens the closing date. The coordination work is building a sequence, inspections first, estoppels next, funding last, that respects both the building and the calendar.</p>"
+  },
+  {
+   "heading": "Where Closings Actually Slow Down",
+   "html": "<ul><li>tenant estoppel certificates that come back late or with unexpected exceptions noted</li><li>a building engineering report that flags deferred maintenance nobody had priced in</li><li>an easement or shared-access agreement for a loading dock or utility corridor that needs sign-off</li><li>the lender's own property condition assessment sitting behind the buyer's inspection queue</li><li>a punch list on recent tenant improvement work that isn't formally closed out</li><li>insurance certificates dated to the wrong policy period for the closing date</li></ul>"
+  },
+  {
+   "heading": "Scheduling Access Without Disrupting Tenants",
+   "html": "<p>A building with occupied suites, whether it is a Bricktown mixed-use property or a distribution building along the I-40 corridor, still has to function while it changes hands. That means batching inspector visits instead of letting three separate vendors show up in the same week unannounced, giving tenants real notice for anything louder than a hallway walkthrough, and keeping mechanical room access requests separate from anything that touches leased space directly. Investors who treat this as an afterthought usually end up apologizing to a tenant days before closing, which is not the impression anyone wants to leave behind.</p><p>The same discipline applies on the identification side. If a candidate property in the MAPS-adjacent downtown core or near Tinker Air Force Base needs a walkthrough before it can be seriously considered, that visit has to happen early enough that a bad report still leaves time to pivot to another identified candidate.</p>"
+  },
+  {
+   "heading": "Keeping the Qualified Intermediary Synced to the Closing Date",
+   "html": "<p>The qualified intermediary has to receive the relinquished sale proceeds and hold them until the replacement closing, and the investor can never touch that money directly without breaking the exchange. As the closing date moves, even by a few days because a report came back late, the QI, the title company, and the lender all need the updated date at the same time, not staggered over separate phone calls. A closing coordination process that keeps everyone working off one current schedule is what keeps a building-level delay from turning into a blown exchange deadline.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does the 180-day deadline ever pause for a building issue on the replacement property?",
+   "a": "No. The count runs on calendar days from the relinquished sale regardless of what comes up on inspection, engineering review, or tenant access. A serious building problem has to be resolved or the deal abandoned in favor of another identified property, not used as grounds for more time."
+  },
+  {
+   "q": "Can I schedule the closing date around a tenant's lease renewal or move-out?",
+   "a": "You can try to line the two up, but the 180-day deadline is fixed and does not move for lease administration. If a tenant event would push closing past day 180, the exchange timeline takes priority and the lease matter has to be handled around it."
+  },
+  {
+   "q": "Who actually holds the exchange proceeds while a closing date shifts?",
+   "a": "The qualified intermediary holds the funds from the relinquished sale through the replacement closing. The investor cannot access or direct that money directly at any point, even briefly, without risking constructive receipt and disqualifying the exchange."
+  },
+  {
+   "q": "What happens if tenant improvement work on the replacement property is still open at closing?",
+   "a": "An open punch list or unresolved contractor sign-off can slow the closing itself and complicate the estoppel process, since a tenant may not certify the space as delivered while work is incomplete. Getting that closed out before the final week of the window avoids a last-minute scramble."
+  },
+  {
+   "q": "How much lead time should I build in for building engineering reports before closing?",
+   "a": "Order roof, mechanical, and structural reports as soon as a replacement candidate is seriously in play, not after an offer is accepted, since findings sometimes require a second visit or a specialist follow-up that a compressed schedule cannot absorb."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 861
+}

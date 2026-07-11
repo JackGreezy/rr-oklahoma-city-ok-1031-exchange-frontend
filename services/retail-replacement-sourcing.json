@@ -1,0 +1,58 @@
+{
+ "slug": "retail-replacement-sourcing",
+ "taxonomy": "services",
+ "title": "Retail Replacement Sourcing",
+ "name": "Retail Replacement Sourcing",
+ "metaTitle": "Retail Replacement Sourcing in Oklahoma City, OK",
+ "metaDescription": "We source retail replacement property in Oklahoma City for 1031 exchanges, from single pads to multi-tenant centers, matched to your basis and bandwidth.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Retail replacement property in Oklahoma City ranges from a single pad on Memorial Road to a full strip center in Moore with six tenants and a shared parking field, and those two deals need almost nothing in common on the diligence side. We source retail assets against your basis target and your appetite for managing multiple tenants instead of one, walking each center the way you'd walk a building you already owned.</p>"
+  },
+  {
+   "heading": "Where Retail Actually Performs Across the Metro",
+   "html": "<p>The Memorial Road and Quail Springs corridor carries the deepest retail traffic in the metro, while the south side near Moore and Norman keeps adding rooftops that support new pad development. Downtown and Bricktown retail has picked up energy-sector office lunch-hour traffic alongside the foot traffic MAPS-driven redevelopment has brought into the core.</p><p>Each corridor draws a different tenant type, so we match center location to tenant mix before we match tenant mix to price, since a good box in the wrong corridor still sits vacant longer than it should.</p>"
+  },
+  {
+   "heading": "Center-Level Diligence Beyond the Rent Roll",
+   "html": "<p>A multi-tenant center carries shared systems and shared obligations that a single-tenant deal doesn't, so we check these before a center goes on your list:</p><ul><li>Shared parking ratio and whether it meets current code for full occupancy</li><li>Exterior signage rights and any pylon sign sharing agreements among tenants</li><li>Common area maintenance allocation method across all tenant suites</li><li>Anchor tenant co-tenancy clauses that could trigger rent reduction if an anchor leaves</li><li>Roof sections and drainage, since strip centers often carry multiple roof ages</li><li>Outstanding tenant improvement obligations owed by the current landlord</li></ul><p>We put every finding in writing so you're weighing the same information we used to recommend the center.</p>"
+  },
+  {
+   "heading": "Tenant Mix and Turnover: Reading It Like an Operator",
+   "html": "<p>A center's tenant mix tells you more than its headline occupancy rate, so we look at the balance of national and local tenants, turnover history, and how long units actually sit vacant between tenants. Retail buildouts often take longer than an apartment turn, so downtime between tenants costs more per vacant month than the same square footage in a residential setting, and an adjacent vacancy can pull foot traffic down for the tenants still paying rent next door.</p>"
+  },
+  {
+   "heading": "Weighing a Single Pad Against a Multi-Tenant Center",
+   "html": "<p>A single net lease pad is simpler to manage and usually prices higher per square foot, while a multi-tenant center takes more coordination but spreads income across several tenants instead of relying on one. We weigh that against your own bandwidth for tenant coordination, especially if you're already managing other Oklahoma City properties on a similar timeline.</p><p>Neither choice is automatically the safer one, since a single-tenant pad concentrates all your income risk in one lease while a multi-tenant center spreads that risk but multiplies the number of things that can go wrong on any given month.</p>"
+  },
+  {
+   "heading": "Sourcing Timeline for Retail Inside Your Exchange Window",
+   "html": "<p>Multi-tenant retail closings sometimes move slower than single-tenant deals because estoppel certificates have to come back from every tenant in the center rather than from a single tenant. We set expectations with your qualified intermediary early on any center with several tenants so a slow estoppel process doesn't put your 180-day closing window at risk.</p><p>We start requesting estoppel certificates the day a center goes on your identification list, not the day you go under contract, since a tenant slow to respond can otherwise cost you weeks you don't have to spare.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Why do multi-tenant retail centers take longer to close than single-tenant deals?",
+   "a": "Every tenant in the center typically needs to sign an estoppel certificate confirming lease terms before closing, and collecting those from multiple tenants takes longer than getting a single one signed. We build extra time into the schedule for any center with more than a couple of tenants."
+  },
+  {
+   "q": "What is a co-tenancy clause and why does it matter for identification?",
+   "a": "A co-tenancy clause lets certain tenants reduce rent or exit if an anchor tenant leaves the center, which can change the property's income if that anchor departs. We flag any co-tenancy language before a center goes on your identification list so you're underwriting the real risk rather than the current rent roll alone."
+  },
+  {
+   "q": "Can I identify a retail center where I haven't received all tenant estoppels yet?",
+   "a": "Yes, identification only requires an unambiguous description of the property, not completed diligence. We still push to collect estoppels as early as possible so you have real information before you're locked into closing on that specific center."
+  },
+  {
+   "q": "How do shared parking agreements affect a center's usable occupancy?",
+   "a": "If a center's parking ratio is already tight relative to current code, adding a high-traffic tenant like a restaurant can be restricted or require a variance. We check the parking math against actual code requirements before recommending full-occupancy assumptions in the underwriting, since an optimistic parking count can quietly cap your leasing options later."
+  },
+  {
+   "q": "What should I ask about roof sections before closing on a strip center?",
+   "a": "Ask for the roof age and any warranty documentation section by section, since strip centers are often built and re-roofed in phases rather than all at once. That detail changes your near-term capital plan more than a single blended roof age figure would suggest, and it can be the difference between a manageable capital schedule and an unwelcome surprise in year two."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 853
+}

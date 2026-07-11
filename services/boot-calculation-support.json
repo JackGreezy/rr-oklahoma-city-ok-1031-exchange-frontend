@@ -1,0 +1,58 @@
+{
+ "slug": "boot-calculation-support",
+ "taxonomy": "services",
+ "title": "Boot Calculation Support",
+ "name": "Boot Calculation Support",
+ "metaTitle": "Boot Calculation Support in Oklahoma City, OK",
+ "metaDescription": "Boot calculation support for Oklahoma City exchanges, covering cash, debt relief, and the equipment and fixtures that quietly turn into taxable boot.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The rooftop unit nobody thought to list, the loading dock leveler that technically belongs to the seller, the standby generator that everyone assumed conveyed with the building. Boot problems rarely start with cash. They start with equipment questions that a facilities person would catch and a closing attorney might not think to ask.</p>"
+  },
+  {
+   "heading": "What Counts as Boot and Why It Gets Taxed",
+   "html": "<p>Boot is any value received in an exchange that is not like-kind real property, and it triggers recognized gain up to the amount of boot even inside an otherwise valid exchange. Cash left over after buying a cheaper replacement is the obvious version. Debt relief, personal property received alongside the real estate, and even certain prorated items at closing can all count, which is why a boot calculation is really a line-by-line review of everything changing hands rather than a single glance at the sale price difference. Skipping that review and assuming the price gap tells the whole story is how an investor ends up with a tax surprise months after the closing binder has already been filed away.</p>"
+  },
+  {
+   "heading": "Where Facilities Equipment Turns Into a Boot Problem",
+   "html": "<p>A downtown office building near the MAPS-funded redevelopment corridor might convey with rooftop HVAC units, a backup generator, and built-in security systems that read as part of the real estate to anyone who has managed the building, but tax law does not always agree. Equipment that is legally personal property rather than a fixture can be treated as boot if it is received as part of the deal without a like-kind counterpart on the relinquished side. The fix usually is not avoiding the equipment, it is correctly categorizing what is a fixture, what is personal property, and what value that personal property carries. A facilities inventory taken before the sale, listing what is bolted in versus what could theoretically be removed, gives the boot calculation something concrete to work from instead of a guess made at closing.</p>"
+  },
+  {
+   "heading": "Debt Relief Counts Even When No Cash Changes Hands",
+   "html": "<p>An investor who pays off a larger mortgage on the relinquished property and takes on a smaller loan on the replacement has received boot in the form of debt relief, even if not a single dollar landed in a bank account. This surprises investors who think of boot strictly as cash left over, and it is one of the more common ways a exchange that looks clean on paper still generates some recognized gain.</p>"
+  },
+  {
+   "heading": "Common Boot Traps in Building Sales",
+   "html": "<ul><li>equipment or fixtures that convey with the building but are legally personal property</li><li>a mortgage payoff on the old property that exceeds the new loan by a wide margin</li><li>cash taken out at closing to cover unrelated expenses</li><li>prorated rent, security deposits, or utility credits handled incorrectly at settlement</li><li>a replacement property priced below the relinquished sale without additional cash reinvested to close the gap</li></ul>"
+  },
+  {
+   "heading": "Getting the Numbers Right Before Closing",
+   "html": "<p>A boot calculation needs to happen before the closing statement is final, not after, since fixing a misclassified piece of equipment or an overlooked debt relief number is far easier while the deal is still being papered. Coordinating with the qualified intermediary and the investor's tax advisor on exactly what is conveying, and how each item is categorized, keeps the final number defensible instead of a surprise on the tax return. That coordination is worth starting as soon as the replacement property is identified, not after the purchase agreement is already signed, since renegotiating which equipment conveys gets harder once both sides think the deal terms are settled.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does equipment left in the building automatically count as boot?",
+   "a": "Not automatically, but it depends on whether the item is legally a fixture or personal property, and whether a comparable item was part of the relinquished property. Rooftop units, generators, and built-in systems all need to be reviewed individually rather than assumed to pass through cleanly, since the same piece of equipment can be classified differently building to building."
+  },
+  {
+   "q": "Is debt relief really taxed the same as cash boot?",
+   "a": "It is treated the same way for calculation purposes. If the new loan is smaller than the payoff on the old one, the difference counts as boot even though the investor never physically received that money."
+  },
+  {
+   "q": "Can I avoid boot by adding cash to close the gap on a cheaper replacement?",
+   "a": "Adding cash to the deal can offset some boot exposure created by lower debt or a lower purchase price, but it depends on the full picture of what changed hands. This is exactly the kind of calculation worth confirming with a tax advisor before closing rather than assuming it balances out."
+  },
+  {
+   "q": "What happens if boot shows up on my exchange after closing?",
+   "a": "Recognized gain up to the amount of boot still applies even after the deal is done, since boot is calculated based on what was actually received in the transaction, not adjusted after the fact. This is why identifying it before closing matters more than catching it afterward."
+  },
+  {
+   "q": "Do prorated items at closing, like security deposits, ever create boot?",
+   "a": "They can, depending on how they are structured and whether they shift value to the investor outside the like-kind exchange of real property. A line-by-line review of the closing statement is the only reliable way to catch these before they quietly become a tax problem later on."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 853
+}

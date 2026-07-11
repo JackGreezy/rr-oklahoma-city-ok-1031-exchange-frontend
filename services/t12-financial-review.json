@@ -1,0 +1,58 @@
+{
+ "slug": "t12-financial-review",
+ "taxonomy": "services",
+ "title": "T12 Financial Review",
+ "name": "T12 Financial Review",
+ "metaTitle": "T12 Financial Review for 1031 Replacement Property in Oklahoma City, OK",
+ "metaDescription": "We trace trailing twelve-month financials back to bank deposits and invoices for Oklahoma City 1031 replacement property before you lock your basis.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A trailing twelve-month financial statement tells you what a property actually did, not what the seller's pro forma says it should do, and the gap between those two documents is exactly where exchange buyers overpay. We run the T12 against bank deposits, vendor invoices, and utility bills before any Oklahoma City property makes your identification list, the same way you'd audit a building's operating budget against what actually hit the account each month.</p>"
+  },
+  {
+   "heading": "Pro Forma Versus What the Bank Statements Actually Show",
+   "html": "<p>Sellers typically project market rent and minimal expenses in a pro forma, while the T12 shows actual collections and actual repair costs, and the gap usually shows up in the repairs and maintenance line and in vacancy loss that the pro forma assumes away. We treat the pro forma as a marketing document and the T12 as the starting point for real underwriting, then we verify the T12 itself against source records before trusting it either.</p>"
+  },
+  {
+   "heading": "Line Items We Trace Back to Source Documents",
+   "html": "<p>Rather than accepting a T12 summary at face value, we trace each major line to the document behind it:</p><ul><li>Gross rental income traced to bank deposits rather than the accounting software total alone</li><li>Utility expenses traced to actual utility company bills for the trailing period</li><li>Repair and maintenance costs against vendor invoices, flagging any deferred items</li><li>Property tax expense against the county assessor's actual billed amount</li><li>Insurance premium against the current policy declarations page rather than an older renewal figure</li><li>Management fee calculation method and whether it matches the stated percentage</li></ul><p>Any line that doesn't reconcile gets flagged in writing before the property goes on your identification list.</p>"
+  },
+  {
+   "heading": "Why Oklahoma Property Tax and Insurance Lines Need Extra Attention",
+   "html": "<p>A property tax reassessment triggered by the sale itself can push the go-forward expense well above the seller's trailing twelve-month number, so we don't take that line at face value. Insurance costs across the region have also moved due to severe weather exposure, so a trailing premium that looks stable can understate what you'll actually pay once you own the Oklahoma City property, sometimes by a meaningful margin.</p>"
+  },
+  {
+   "heading": "How T12 Findings Change Your Basis and Depreciation Setup",
+   "html": "<p>We route our T12 findings to your CPA or tax advisor so they're setting up your depreciation schedule and basis allocation between land and improvements based on verified numbers rather than the seller's summary. Form 8824 preparation itself is a separate step handled closer to your tax filing, but the financial detail we verify here feeds directly into that later work.</p><p>We package the verified T12 alongside our source-document notes so your advisor isn't starting from a blank spreadsheet, and they can see exactly which lines we adjusted from the seller's original numbers and why.</p>"
+  },
+  {
+   "heading": "Timing the Review Inside Your 45-Day Window",
+   "html": "<p>Financial review needs to happen before you lock your identification list, not after, since findings from the T12 can change which properties you're willing to commit basis to. We request bank-level detail and vendor invoices early in the sourcing process so this review doesn't become the bottleneck against your deadline, and we build in time for a second pass if the first request comes back incomplete.</p><p>On a property with weak seller cooperation, we'll say so plainly rather than let a thin financial picture quietly ride onto your primary identification slot.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What's the difference between a pro forma and a T12?",
+   "a": "A pro forma is a forward-looking projection the seller builds to market the property, while a T12 is the trailing twelve months of actual financial activity. We rely on the T12, traced to source documents, rather than the pro forma for underwriting any Oklahoma City replacement candidate, and we treat the two documents as answering different questions rather than interchangeable versions of the same number."
+  },
+  {
+   "q": "How do you verify collected rent against what the seller reports?",
+   "a": "We trace reported gross rental income against actual bank deposits for the trailing period, which surfaces gaps between what was billed and what was actually collected, and we flag any pattern of concessions that isn't reflected in the summary before the property goes on your identification list."
+  },
+  {
+   "q": "Why might property tax jump after closing even if the T12 looks stable?",
+   "a": "A sale can trigger a reassessment that raises the property's taxable value well above what the seller was paying, so the trailing twelve-month tax line doesn't always reflect what you'll owe going forward. We flag this risk specifically rather than assuming continuity from the seller's numbers, and we recommend running a reassessment estimate before you finalize your offer."
+  },
+  {
+   "q": "Does the T12 review affect my depreciation schedule after closing?",
+   "a": "It can, since the verified income and expense detail informs how your tax advisor sets up basis allocation and depreciation. We send our findings directly to your CPA so they're working from confirmed numbers rather than a seller's summary, and we're glad to walk through any adjustment with them directly if a question comes up."
+  },
+  {
+   "q": "What if the seller won't release bank-level detail before I identify the property?",
+   "a": "We push for at least partial access to bank deposits or a sample period before identification, since a summary T12 alone isn't enough to underwrite confidently. Limited access lowers our confidence in a property and affects whether it makes your primary list or a backup slot, and we'll tell you plainly when that limited access changes our recommendation."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 851
+}

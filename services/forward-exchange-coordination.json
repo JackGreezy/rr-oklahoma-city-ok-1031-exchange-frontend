@@ -1,0 +1,58 @@
+{
+ "slug": "forward-exchange-coordination",
+ "taxonomy": "services",
+ "title": "Forward Exchange Coordination",
+ "name": "Forward Exchange Coordination",
+ "metaTitle": "Forward Exchange Coordination in Oklahoma City, OK",
+ "metaDescription": "Coordinating a standard forward exchange for Oklahoma City property, sequencing sale, tenant handoff, identification, and replacement closing.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A forward exchange looks simple on paper, sell first, buy second, but the version that plays out on the ground involves a tenant who needs notice, a building engineer who needs a handoff date, and a qualified intermediary who needs everything to happen in the right order. Coordinating the paperwork side is only half the job; coordinating the people who actually run the building through the transition is the part that keeps a good deal from turning into a headache in the weeks after closing.</p>"
+  },
+  {
+   "heading": "How a Forward Exchange Actually Sequences",
+   "html": "<p>In a forward exchange, the relinquished property sells first, the qualified intermediary holds the proceeds, and the investor then has 45 days to identify and 180 days to close on a replacement. It is the more common structure, used whenever the investor's current property closes before a replacement is lined up, as opposed to a reverse exchange where the order flips. The sequencing sounds simple stated that way, but every step downstream, from tenant notices to building handoff, depends on the relinquished sale actually closing on schedule. A delay of even a week on that first closing pushes the entire 45-day and 180-day sequence back with it, which is why the sale side deserves the same scheduling discipline as the purchase side, not less.</p>"
+  },
+  {
+   "heading": "Handling Tenants Through a Sale That Isn't Simple",
+   "html": "<p>A downtown office building near Bricktown with active energy-sector tenants does not stop operating the day the sale closes. Lease files, security deposit records, and any pending maintenance requests have to transfer cleanly to the new owner, and tenants deserve clear notice of who to call after the handoff rather than finding out when their usual contact stops answering. Getting this transition right protects the seller's reputation and gives the buyer a clean starting point, which matters if the same investor or broker relationship comes up again on the replacement side. A rushed or sloppy tenant handoff also tends to surface as a service issue on the buyer's punch list, which can complicate the closing statement right when everyone wants the sale finished cleanly.</p>"
+  },
+  {
+   "heading": "Where the Facilities Team Sits in the Sequence",
+   "html": "<p>Whoever manages the building day to day is usually the person with the clearest picture of open work orders, warranty status, and vendor contracts, all of which the buyer's team will ask about during due diligence on the relinquished sale. Looping that person into the closing timeline early, rather than treating the sale as a purely financial transaction, means fewer last-minute questions holding up the closing that starts the whole exchange clock. That person also usually knows which vendor contracts need formal assignment to the buyer versus which ones simply end at closing, a distinction the closing attorney rarely thinks to check unprompted.</p>"
+  },
+  {
+   "heading": "Timing Traps in a Standard Forward Exchange",
+   "html": "<ul><li>starting to look for a replacement only after the relinquished sale has already closed</li><li>underestimating how long tenant and vendor handoff takes on the relinquished property</li><li>assuming the qualified intermediary relationship can be set up after the sale is already under contract</li><li>identifying a replacement property before confirming it can realistically close within the remaining days</li><li>letting the buyer's due diligence period run longer than expected without adjusting the exchange timeline</li></ul>"
+  },
+  {
+   "heading": "Coordinating Two Closings Without a Gap",
+   "html": "<p>The relinquished sale and the replacement purchase are two separate closings run by two separate teams, but they share one exchange clock. Keeping the qualified intermediary, both sets of closing attorneys, and whoever is handling the building handoff on the same page about dates, rather than treating the two closings as unrelated transactions, is what keeps a forward exchange from stalling between the sale and the purchase, since the biggest risk in this structure is rarely one bad deal, it's a communication gap between two closing teams that never realized how tightly their timelines were actually linked.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "What makes a forward exchange different from a reverse exchange?",
+   "a": "In a forward exchange the relinquished property sells first and the replacement is identified and purchased afterward. A reverse exchange flips that order, acquiring the replacement before the old property sells, which requires a different holding structure for the interim period."
+  },
+  {
+   "q": "Do I need a qualified intermediary lined up before I list my property for sale?",
+   "a": "Yes, ideally before the sale closes, since the intermediary has to receive the sale proceeds directly. Setting this up after the sale is already under contract can create timing pressure that's easy to avoid by arranging it earlier."
+  },
+  {
+   "q": "How should I handle tenant notices when my relinquished property sells mid-exchange?",
+   "a": "Tenants should get clear, timely notice of the ownership change and a new point of contact, ideally coordinated with the buyer so there is no gap in who handles maintenance requests or lease questions during the handoff."
+  },
+  {
+   "q": "What happens if my relinquished sale closing gets delayed?",
+   "a": "The 45-day and 180-day exchange clocks both start from the actual closing date, so a delay on the relinquished sale simply shifts both deadlines later. It does not shorten the windows, but it does compress however much time was already planned for identifying a replacement."
+  },
+  {
+   "q": "Who should be involved in building handoff during a forward exchange sale?",
+   "a": "Whoever manages the property day to day should be part of the closing timeline early, since open work orders, vendor contracts, and warranty status are exactly the details a buyer's due diligence team will ask about before closing."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 861
+}

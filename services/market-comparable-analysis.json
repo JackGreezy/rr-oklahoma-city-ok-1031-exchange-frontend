@@ -1,0 +1,58 @@
+{
+ "slug": "market-comparable-analysis",
+ "taxonomy": "services",
+ "title": "Market Comparable Analysis",
+ "name": "Market Comparable Analysis",
+ "metaTitle": "Market Comparable Analysis in Oklahoma City, OK",
+ "metaDescription": "Building a market comparable set for Oklahoma City replacement property that weighs operating costs and building condition alongside sale price.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Two buildings can sell at the same price per square foot and cost entirely different amounts to actually operate. A comparable analysis built on sale price alone misses exactly the details a facilities manager would flag first, deferred maintenance, aging mechanical systems, and utility costs that don't show up in a broker's flyer. Building a comp set that catches these gaps takes more legwork than pulling a sales report, but it protects the exchange decision from resting on a number that only tells half the story.</p>"
+  },
+  {
+   "heading": "Why Comps Need Operating Data Alongside Sale Prices",
+   "html": "<p>A defensible comparable set for identifying replacement property looks at recent sales of similar buildings by size, use, and location, but a sale price alone doesn't capture what the buyer inherited alongside it. A building that sold at a strong price per square foot with a five-year-old roof is a different value proposition than one that sold at the same price with a roof already past its expected service life. Comps built without that context can lead an investor to overvalue a candidate that looks comparable on paper but carries meaningfully more near-term capital cost. A facilities-trained eye reading the same two comps would ask what each seller was walking away from, in addition to what each buyer actually paid.</p>"
+  },
+  {
+   "heading": "The No-Coastal-Pricing Value Play, and What It Actually Means",
+   "html": "<p>Oklahoma City commercial property routinely trades well below coastal and gateway markets on a per-square-foot basis, which is a real driver for exchange investors seeking replacement value without stretching into unfamiliar geography. But that value gap is not evenly distributed. A downtown property near the MAPS-funded redevelopment corridor commands a real premium over comparable space a few miles out, and treating the whole metro as uniformly discounted compared to coastal markets is how an investor ends up overpaying relative to true local comps. The value play is real, but it has to be applied at the submarket level, not painted across the entire city with one broad number pulled from a national market report.</p>"
+  },
+  {
+   "heading": "Where Facilities Data Changes a Comp's Real Value",
+   "html": "<p>Utility cost history, recent capital expenditures, and outstanding deferred maintenance are the kind of operating detail that separates two similarly priced buildings more than location alone. A comp set that pulls this information, where it's available, alongside sale price and rent roll data gives a much clearer picture of which candidate actually represents comparable value rather than just a comparable price tag. This data isn't always easy to get from a seller who wants the deal to look clean, but a broker or facilities contact familiar with the building can often fill in the gaps a formal disclosure package leaves out.</p>"
+  },
+  {
+   "heading": "Comparable Pitfalls Worth Checking Before You Trust a Number",
+   "html": "<ul><li>using a comp from a different submarket without adjusting for location-driven price differences</li><li>ignoring the age and condition of major building systems when comparing sale prices</li><li>relying on asking prices instead of confirmed closed sales</li><li>overlooking a recent renovation or capital investment that inflated one comp's price relative to others</li><li>treating a single standout sale as representative of the broader submarket trend</li></ul>"
+  },
+  {
+   "heading": "Building a Defensible Comp Set for the Identification List",
+   "html": "<p>A workable comp analysis pulls closed sales from the relevant submarket, adjusts for building condition and operating cost where that data is available, and flags outliers rather than averaging them in blindly. That defensible number is what supports both the identification decision and, later, the boot and basis calculations that depend on an accurate value for the replacement property. Building it this way takes longer than accepting the first sales report handed over by a broker, but it holds up far better if a lender, a tax advisor, or an appraiser ever questions how the value was reached.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does Oklahoma City really trade at lower prices than coastal markets across the board?",
+   "a": "Generally yes on a per-square-foot basis, but the discount isn't uniform. Downtown and other high-demand submarkets near active redevelopment carry real premiums over outlying areas, so a comp set has to account for submarket rather than leaning on the metro-wide average alone."
+  },
+  {
+   "q": "Why do two buildings at the same sale price sometimes represent very different value?",
+   "a": "Building condition, deferred maintenance, and remaining useful life on major systems like the roof and HVAC can differ significantly even when sale prices per square foot look similar, which is why operating data matters alongside the price itself."
+  },
+  {
+   "q": "Should I use asking prices in a comp analysis if closed sales are limited?",
+   "a": "Closed sales are far more reliable, since asking prices don't reflect what a buyer actually agreed to pay. If closed comps are genuinely scarce, that scarcity itself should be noted rather than filled in with unreliable asking data."
+  },
+  {
+   "q": "How much does deferred maintenance actually affect a comp's relevance?",
+   "a": "It can significantly change the real comparability of two properties, since a building requiring near-term capital work effectively costs more than its sale price suggests. Including that context prevents overvaluing a candidate based on price alone, and it gives a much more honest picture of what the replacement will actually cost to own."
+  },
+  {
+   "q": "Can a single recent sale set the value for an entire submarket?",
+   "a": "One standout sale, especially if it involved unusual terms or a highly motivated buyer, shouldn't be treated as representative on its own. A defensible comp set weighs several recent sales rather than anchoring the whole analysis to one outlier transaction."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 856
+}

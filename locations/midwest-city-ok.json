@@ -1,0 +1,62 @@
+{
+ "slug": "midwest-city-ok",
+ "taxonomy": "locations",
+ "title": "Midwest City",
+ "name": "Midwest City",
+ "metaTitle": "Midwest City in Oklahoma City, OK",
+ "metaDescription": "1031 exchange sourcing for Midwest City industrial, flex, and office replacement property serving the Tinker Air Force Base aerospace supply chain.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Midwest City's commercial base is shaped almost entirely by one neighbor: Tinker Air Force Base, the state's largest employer and a major aerospace maintenance depot. An exchange buyer here is generally underwriting exposure to that single anchor, whether directly through a defense contractor tenant or indirectly through the retail and service businesses that serve the base's workforce.</p>"
+  },
+  {
+   "heading": "Contractor Flex Space Tied to Depot Contracts",
+   "html": "<p>Flex and light-industrial buildings near the base perimeter lease to aerospace maintenance subcontractors, parts suppliers, and logistics firms whose lease terms often track the length of a specific depot contract rather than a standard market lease. A buyer replacing into this stock should ask what happens to the space if the underlying contract isn't renewed, since a single-tenant building configured around one contractor's shop-floor layout may need real reconfiguration to serve a different tenant.</p><p>Security and access requirements tied to proximity to the base can also affect a building's marketability to non-defense tenants, and that's worth pricing into the deal rather than assuming the current use is easily replaceable. Buyers should also confirm whether any of the tenant's improvements, cranes, compressed-air lines, or specialty ventilation, were installed under a government contract that restricts their transfer or removal.</p>"
+  },
+  {
+   "heading": "Rose State College and the SE 15th/Air Depot Retail Base",
+   "html": "<p>Rose State College supports a steady base of student-serving retail and service tenants, while the SE 15th Street and Air Depot Boulevard corridors carry older strip retail that leases primarily to the base's workforce and surrounding residential population. This retail stock tends to be smaller-footprint and lower rent than comparable centers in Edmond or Moore, which is part of the value case for buyers looking for entry-level commercial product in the metro.</p>"
+  },
+  {
+   "heading": "Office Space Tied to Defense-Adjacent Services",
+   "html": "<p>Smaller office buildings around the base serve engineering firms, staffing agencies, and logistics coordinators working the depot's supply chain, and lease terms here often run shorter than a standard downtown Oklahoma City office lease because tenant headcount can move with contract cycles. A buyer should confirm tenant contract exposure alongside the usual lease abstract review.</p><p>Because several of these tenants scale staffing up or down with active contract awards, occupancy in this office stock can look uneven compared with a stable downtown professional-services building, and that variability should be reflected in how conservatively a buyer underwrites future income.</p>"
+  },
+  {
+   "heading": "What a Midwest City Identification Usually Includes",
+   "html": "<p>Replacement buyers here are typically underwriting one of the following:</p><ul><li>flex or light-industrial buildings leased to Tinker supply-chain contractors</li><li>strip retail and service centers along SE 15th Street and Air Depot Boulevard</li><li>small office buildings serving defense-adjacent engineering and staffing tenants</li><li>student-serving retail near Rose State College</li></ul>"
+  },
+  {
+   "heading": "Talking Manager to Manager on a Tinker-Adjacent Building",
+   "html": "<p>Get the outgoing manager's read on the tenant's contract renewal timeline before you're past your inspection contingency, since a depot subcontractor losing a contract can leave a purpose-built shop space vacant longer than a generic flex building would sit. Ask directly about any security-clearance-related access restrictions tied to the building's proximity to the base perimeter, and confirm who controls badge access if that applies.</p><p>If the tenant runs shift work tied to depot schedules, coordinate your ownership transition and any planned capital work around those shift changes rather than around your own closing date, and get the maintenance log on any specialized power or compressed-air systems before you close.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much risk does a Tinker Air Force Base contractor lease carry compared to a standard industrial lease?",
+   "a": "It depends on the length and renewal history of the underlying depot contract. A tenant with a long, repeatedly renewed contract history carries less risk than one on a shorter or newly awarded contract, so ask for that history during diligence."
+  },
+  {
+   "q": "Can I identify a Midwest City flex building alongside a retail center on the same 45-day list?",
+   "a": "Yes. The 45-day identification rules govern the count or value of properties named, not the asset class mix, so combining flex and retail on one list is workable if your qualified intermediary confirms it meets the rule you're using."
+  },
+  {
+   "q": "What happens to a purpose-built defense contractor space if the tenant's contract isn't renewed?",
+   "a": "It may need reconfiguration to attract a new tenant, since shop-floor layouts and specialized power or security features built for one contractor don't always suit another. Price potential re-tenanting costs into your underwriting."
+  },
+  {
+   "q": "Does the 95% rule ever make sense for a Midwest City exchange with a short list of properties?",
+   "a": "The 95% rule requires you to actually acquire 95% of the value of everything you identify, regardless of count, so it's typically used only when a buyer is confident it can close on nearly everything named, which is a higher bar than the three-property or 200% rule."
+  },
+  {
+   "q": "How does constructive receipt risk apply if a Midwest City tenant pays rent directly to me during a sale?",
+   "a": "If exchange proceeds or rent tied to the relinquished property pass through your control instead of your qualified intermediary's, that can trigger constructive receipt and disqualify the exchange, so route all such funds through your QI."
+  },
+  {
+   "q": "Why does office occupancy near Tinker Air Force Base look more uneven than downtown Oklahoma City office?",
+   "a": "Many tenants here are staffing and engineering firms whose headcount scales with active depot contracts, so occupancy can shift with contract award cycles in a way a stable downtown professional-services tenant base typically doesn't."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 853
+}

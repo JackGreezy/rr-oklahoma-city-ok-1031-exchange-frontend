@@ -1,0 +1,58 @@
+{
+ "slug": "form-8824-preparation-support",
+ "taxonomy": "services",
+ "title": "Form 8824 Preparation Support",
+ "name": "Form 8824 Preparation Support",
+ "metaTitle": "Form 8824 Preparation Support in Oklahoma City, OK",
+ "metaDescription": "Pulling together the closing numbers Oklahoma City investors need for a clean Form 8824 filing, including basis carryover and boot amounts.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The closing binder is already thick with title work, estoppels, and inspection reports by the time anyone thinks about Form 8824. Getting the numbers on that form right depends on documents pulled together months earlier, which is exactly why waiting until tax season to start is the wrong order to do it in. The closing team that gathers those numbers while the deal is still fresh saves the investor's tax preparer weeks of chasing records months later.</p>"
+  },
+  {
+   "heading": "What Form 8824 Actually Reports",
+   "html": "<p>Form 8824 is filed with the investor's tax return for the year the exchange occurred, reporting the relinquished and replacement properties, the realized gain, any boot received, and the resulting basis in the new property. It is the document that formally tells the IRS the transaction was structured as a like-kind exchange rather than a taxable sale, and the numbers on it flow directly from the closing statements on both properties. Getting those figures wrong does not automatically undo the exchange, but it invites the kind of follow-up questions from the IRS that most investors would rather avoid entirely.</p>"
+  },
+  {
+   "heading": "Where the Numbers Actually Come From",
+   "html": "<p>Realized gain, recognized gain, and adjusted basis on the new property all trace back to the closing statements, the boot calculation, and the original basis records on the relinquished property. An investor who kept clean depreciation schedules and capital improvement records on the old building has a much easier time here than one who has to reconstruct years of records from memory or scattered files. This is another reason the building-side documentation and the tax-side documentation should be assembled together, since the same improvement records that mattered for the boot calculation feed directly into this form.</p>"
+  },
+  {
+   "heading": "The Basis Question That Trips Up Land and Building Owners Alike",
+   "html": "<p>An investor exchanging out of agricultural land on the edge of the metro into a commercial building downtown, or the reverse, carries the original basis forward with adjustments for boot and any additional cash invested, and that carryover basis rarely matches the new property's purchase price. This surprises investors coming from a land holding with a very low basis relative to current value, since the replacement property's depreciation schedule ends up smaller than its purchase price would suggest. The same issue shows up for an owner moving out of a commercial building with years of depreciation already taken. Either way, the number to plan around is the carried-over basis, not the price on the settlement statement, since confusing the two leads to an inflated depreciation schedule that will not survive scrutiny.</p>"
+  },
+  {
+   "heading": "Common Errors on the Form",
+   "html": "<ul><li>using the replacement property's purchase price as its basis instead of the carried-over basis</li><li>leaving out boot that was received in the form of debt relief, not cash</li><li>mismatched dates between the relinquished sale and the replacement closing on the form and the closing statements</li><li>failing to account for capital improvements made to the relinquished property before the exchange</li><li>filing the form without reconciling it against the qualified intermediary's final settlement statement</li></ul>"
+  },
+  {
+   "heading": "Filing on Time Without Reopening the File",
+   "html": "<p>Form 8824 is due with the tax return for the exchange year, and an incomplete or inconsistent filing can prompt questions well after the deal has closed and the investor has moved on to managing the new property. Reconciling the form against the qualified intermediary's closing statement before filing, rather than after a notice arrives, is the difference between a routine filing and reopening a transaction everyone thought was finished. That final reconciliation step takes an afternoon; unwinding a discrepancy after the IRS has already flagged it can take months.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "When is Form 8824 due after an Oklahoma City exchange closes?",
+   "a": "It is filed with the federal tax return for the year the relinquished property sold, not the year the replacement closed if those fall in different tax years. That timing detail matters for exchanges that straddle a calendar year-end, since it changes which tax year's return the form belongs on."
+  },
+  {
+   "q": "Does the replacement property's purchase price become its tax basis?",
+   "a": "No, and this is one of the most common mistakes. The basis carries over from the relinquished property, adjusted for any boot received and additional cash invested, which is usually lower than the purchase price of the new building."
+  },
+  {
+   "q": "How does exchanging out of agricultural land into a commercial building affect the basis calculation?",
+   "a": "The carryover basis rules apply the same way regardless of property type, so a land holding with a very low basis relative to its current value passes that low basis forward, which shrinks the depreciation available on the new commercial building."
+  },
+  {
+   "q": "What records do I need to prepare an accurate Form 8824?",
+   "a": "Closing statements from both the relinquished and replacement properties, depreciation schedules and capital improvement records on the old property, and the boot calculation from the exchange. Gathering these at closing rather than at tax time avoids reconstructing them later."
+  },
+  {
+   "q": "Can I amend Form 8824 if I discover an error after filing?",
+   "a": "Yes, an amended return can correct it, but it is far simpler to reconcile the form against the qualified intermediary's final settlement statement before the original filing than to fix it after the IRS has already processed the return. Building in that reconciliation step as a standard part of closing avoids most amendments before they're ever needed."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 850
+}

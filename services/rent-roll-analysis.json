@@ -1,0 +1,54 @@
+{
+ "slug": "rent-roll-analysis",
+ "taxonomy": "services",
+ "title": "Rent Roll Analysis",
+ "name": "Rent Roll Analysis",
+ "metaTitle": "Rent Roll Analysis for 1031 Replacement Property in Oklahoma City, OK",
+ "metaDescription": "We reconcile rent rolls against lease files and bank deposits for Oklahoma City 1031 replacement property before it goes on your identification list.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A rent roll tells you what a property is supposed to collect, not what it actually collects, and the gap between those two numbers is where exchange buyers get burned. Before any replacement property goes on your identification list, we run the rent roll against lease files, deposit ledgers, and delinquency history the way you'd audit a building you already managed, not the way a broker packages it for a marketing flyer. That gap tends to be small on a stable property and large on one that's been dressed up for sale.</p>"
+  },
+  {
+   "heading": "What the Rent Roll Doesn't Tell You Until You Check",
+   "html": "<p>A rent roll export from property management software shows the billed rate, not necessarily what was actually collected, and concessions given to move a stubborn unit often don't appear anywhere on the summary page. Month-to-month tenants sometimes get shown as if they carry a full-term lease, and rate increases that were never actually posted to the tenant can inflate the numbers a seller is marketing around Oklahoma City.</p><p>We've also seen renewal dates listed incorrectly, which matters a great deal if you're underwriting a near-term lease rollover into your first year of ownership.</p>"
+  },
+  {
+   "heading": "Line Items We Reconcile Against the Lease File",
+   "html": "<p>Before we sign off on a property's numbers, we trace the rent roll back to source documents rather than accepting the summary at face value:</p><ul><li>Base rent against the signed lease, not the property management software export</li><li>Security deposit balances against bank statements, rather than the ledger total alone</li><li>CAM or expense reimbursement calculations against actual invoices</li><li>Renewal option dates and any rate resets tied to those options</li><li>Delinquency and payment plan history over the trailing twelve months</li><li>Vacant unit condition and days on market since the last tenant turn</li></ul><p>We document every discrepancy we find in writing, along with the source we used to confirm it, so the finding holds up if a lender or your tax advisor asks about it later.</p>"
+  },
+  {
+   "heading": "Why This Matters More for Multifamily and Retail Than Single-Tenant Deals",
+   "html": "<p>A multi-tenant apartment community or retail strip in Oklahoma City carries far more line items to reconcile than a single net lease deal, since every unit or suite has its own lease history, deposit balance, and turnover pattern. Submarkets like Edmond and Moore lease up faster than older stock further out, so turnover cost assumptions need to match the specific submarket, not a citywide average pulled from a market report.</p><p>We build a per-unit or per-suite worksheet for larger properties rather than relying on a single blended average, since a property can look healthy on paper while a handful of chronically vacant units are dragging down the real number.</p>"
+  },
+  {
+   "heading": "How Rent Roll Findings Change What You're Willing to Pay",
+   "html": "<p>When reconciliation turns up a gap between billed and collected rent, that's a basis for renegotiating price or terms, and we treat it that way rather than filing it away as a footnote. We build enough time into the sourcing process to run this analysis before your 45-day identification list is locked, and we share findings with your qualified intermediary and tax advisor so basis and depreciation setup reflect verified numbers rather than the seller's marketing package.</p><p>A rent roll reconciliation can shift a property from primary candidate to backup once the real collection numbers come in, which is exactly why we build the review into sourcing rather than treating it as a closing-week formality.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How far back should trailing rent and collection history go?",
+   "a": "Twelve months is the standard window we pull, though we'll go back further if a property shows seasonal patterns or a recent management change that makes a single year hard to interpret cleanly. A longer look can also reveal whether a recent occupancy jump is durable or just a temporary lease-up push."
+  },
+  {
+   "q": "What if the seller won't provide underlying lease files before I identify the property?",
+   "a": "We push for at least a sample of lease files and bank-level rent detail before identification, since a rent roll alone isn't enough to underwrite confidently. If a seller won't provide that access, we treat the property as a lower-confidence candidate on your list and lean more heavily on backup options."
+  },
+  {
+   "q": "Can rent roll problems justify walking away from a property already on my identification list?",
+   "a": "Yes, identifying a property doesn't obligate you to close on it, so a serious rent roll discrepancy discovered during diligence is a legitimate reason to move to a backup candidate instead, provided you still have time inside your 180-day window. That's exactly why we build viable backups into every list rather than leaving you with only one direction to go if the numbers don't hold up."
+  },
+  {
+   "q": "Does rent roll analysis affect how my depreciation schedule gets set up after closing?",
+   "a": "It can, since the actual income and expense detail feeds into how your tax advisor allocates basis between land and improvements. We route our findings to your CPA so they're working from verified numbers rather than the seller's marketing summary when they set up your schedule."
+  },
+  {
+   "q": "Who actually verifies collected rent versus billed rent?",
+   "a": "We do the initial reconciliation against bank deposits and lease files during sourcing, and we recommend your own accountant or property manager review the final numbers again before you close, since a second set of eyes on the ledger rarely hurts and often catches a detail our first pass missed."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 858
+}

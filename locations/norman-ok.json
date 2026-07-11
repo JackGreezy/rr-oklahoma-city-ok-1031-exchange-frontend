@@ -1,0 +1,62 @@
+{
+ "slug": "norman-ok",
+ "taxonomy": "locations",
+ "title": "Norman",
+ "name": "Norman",
+ "metaTitle": "Norman in Oklahoma City, OK",
+ "metaDescription": "1031 exchange sourcing for Norman student-housing, medical office, and research-park replacement property near the University of Oklahoma campus.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Norman's exchange market runs on the University of Oklahoma calendar more than any other submarket in the metro. A buyer looking at student housing here is underwriting an occupancy pattern tied to fall move-in and spring graduation, and that cycle behaves nothing like the medical office and research-park product sitting a few miles away on the same tax roll.</p>"
+  },
+  {
+   "heading": "Student Housing Runs on a Different Clock",
+   "html": "<p>Purpose-built student housing and older off-campus apartment stock near Lindsey Street and the Campus Corner area lease up hard every August and go quiet every May, and a rent roll pulled mid-semester tells a buyer very little about the property's true annual performance. Pre-leasing percentage going into summer matters more here than trailing twelve-month collections, and an exchange buyer should ask for at least two full leasing cycles of turnover data before treating any single semester as representative.</p><p>Parking ratio and bedroom count per unit also move value more than they would in a standard multifamily deal, since a four-bedroom unit near campus commands a materially different rent per bed than a comparable one-bedroom a mile out.</p>"
+  },
+  {
+   "heading": "Medical Office Growth Tied to Norman Regional",
+   "html": "<p>Norman Regional Health System's presence has built out a medical office corridor along Tecumseh Road and near the Porter Avenue campus, and that stock trades on longer, more stable lease terms than the student housing market a short drive away. Physician-group tenants here tend to renew rather than relocate, since build-out costs for exam rooms and imaging suites are expensive to replicate, and that stickiness is part of what a replacement buyer is paying for.</p><p>A second wave of smaller specialty practices, physical therapy, imaging, and outpatient surgery groups, has filled in around the main hospital campus over the past several years, drawn by referral proximity rather than by any particular incentive package. Buyers evaluating this stock should ask how much of a practice's patient volume depends on hospital referrals versus a standalone patient base, since that mix affects how portable the tenant would be if the hospital relationship ever changed.</p>"
+  },
+  {
+   "heading": "The Research Park's Slower, Steadier Tenant Base",
+   "html": "<p>The research and technology park tied to the university's federal and atmospheric-science partnerships draws a tenant base of research contractors and technology firms that sign longer terms than a typical office tenant, in part because specialized lab and data infrastructure is costly to move. This stock rarely comes up for sale, so when it does, exchange buyers should expect fewer directly comparable trades to lean on than they would find pricing a Main Street retail building.</p><p>Because several of these tenants hold multi-year federal or university contracts rather than standard commercial leases, a buyer should ask for the underlying contract term and renewal history rather than treating the lease abstract alone as the full picture of tenant durability.</p>"
+  },
+  {
+   "heading": "What a Norman Identification Usually Draws From",
+   "html": "<p>A realistic Norman replacement list mixes assets across these categories:</p><ul><li>student-oriented apartment buildings near Campus Corner and Lindsey Street</li><li>medical office space along the Tecumseh Road and Porter Avenue corridor</li><li>research-park office and light-lab buildings tied to university partnerships</li><li>retail storefronts along Main Street and Alameda Street</li></ul>"
+  },
+  {
+   "heading": "What the Outgoing Housing Manager Should Hand Over",
+   "html": "<p>Manager to manager, a student housing property carries turnover math that a generic multifamily rent roll won't show you: unit-by-unit pre-lease percentage for the coming fall, the last two years of August move-in complaints, and whatever the current manager has flagged for summer make-ready work before the next lease cycle starts. Ask specifically whether any units carry parental guarantees, since that changes collections risk in a way a straight income statement won't reveal.</p><p>If you're replacing into medical office instead, get the build-out inventory for each suite and confirm which improvements belong to the tenant versus the landlord before your inspection contingency runs out, since exam-room and imaging build-outs are expensive enough that ownership of them affects both your underwriting and your insurance.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Why does pre-leasing percentage matter more than trailing rent collections for a Norman student housing purchase?",
+   "a": "Because occupancy resets every August, a single semester of collections can look strong even while pre-leasing for the coming fall is weak. Ask for at least two leasing cycles of data and the current pre-lease percentage before you rely on any one period."
+  },
+  {
+   "q": "Can I identify a Norman medical office building alongside a student housing property on the same 45-day list?",
+   "a": "Yes. The 45-day identification window and the three-property or 200% rule apply to the value and count of properties named, not the asset class, so a mixed list works as long as you meet the identification requirements your qualified intermediary lays out."
+  },
+  {
+   "q": "How does Norman's research park differ from a standard office building for underwriting purposes?",
+   "a": "Research-park tenants often have lab or data infrastructure that's costly to relocate, which tends to produce longer holds and fewer comparable sales. Expect to lean more on income approach and less on a thin set of recent trades."
+  },
+  {
+   "q": "What boot exposure should I expect moving out of a Norman rental house into a larger apartment building?",
+   "a": "If the mortgage on your new property is smaller than the one you're paying off, or if you pull cash out at closing, that difference is generally treated as boot. Confirm the exact number with your CPA before you finalize the purchase price."
+  },
+  {
+   "q": "Does OU's enrollment trend affect how lenders underwrite Norman student housing?",
+   "a": "Lenders typically want at least a few years of enrollment and pre-lease history for the specific property, beyond university-wide enrollment figures alone, since building-level leasing performance can vary even when overall enrollment is stable."
+  },
+  {
+   "q": "How should I evaluate a Norman medical office tenant whose patients come mostly through hospital referrals?",
+   "a": "Ask for referral-source data and how long the practice has held its current relationship with Norman Regional. A practice heavily dependent on one referral source carries more relocation risk than one with a broad, self-generated patient base."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 945
+}
