@@ -84,11 +84,6 @@ export default function Footer() {
           <div className="grid gap-8 sm:grid-cols-2">
             <div>
               <h3 className="font-heading text-sm uppercase tracking-wider">Address</h3>
-              <p className="mt-4 text-sm text-gray-600">
-                701 N Broadway Ave
-                <br />
-                Oklahoma City, OK 73102
-              </p>
             </div>
           <div>
               <h3 className="font-heading text-sm uppercase tracking-wider">Contact</h3>
