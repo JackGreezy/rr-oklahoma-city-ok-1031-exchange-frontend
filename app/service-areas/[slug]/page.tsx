@@ -7,6 +7,7 @@ import { servicesData } from "@/data/services";
 import { locationsBatch01 } from "@/data/batches/locations/batch-01";
 import { locationsBatch02 } from "@/data/batches/locations/batch-02";
 import { locationsBatch03 } from "@/data/batches/locations/batch-03";
+import { locationEnrichment } from "@/data/location-enrichment";
 import { SITE_NAME, SITE_URL, PRIMARY_STATE_ABBR } from "@/lib/config";
 
 function getLocationBySlug(slug: string) {
@@ -17,6 +18,10 @@ function getLocationContent(slug: string) {
   return locationsBatch01[slug as keyof typeof locationsBatch01] ||
          locationsBatch02[slug as keyof typeof locationsBatch02] ||
          locationsBatch03[slug as keyof typeof locationsBatch03];
+}
+
+function getLocationEnrichment(slug: string) {
+  return locationEnrichment[slug];
 }
 
 type Props = {
@@ -52,6 +57,7 @@ export default async function LocationPage({ params }: Props) {
   const { slug } = await params;
   const location = getLocationBySlug(slug);
   const locationContent = getLocationContent(slug);
+  const enrichment = getLocationEnrichment(slug);
 
   if (!location) {
     notFound();
@@ -93,7 +99,7 @@ export default async function LocationPage({ params }: Props) {
   ];
 
   // FAQs
-  const faqs = locationContent?.faqs || [
+  const faqs = enrichment?.faqs || locationContent?.faqs || [
     {
       question: `How much does it cost to invest in ${location.name}?`,
       answer: `Investment property prices in ${location.name} vary by type and location. Single-family homes typically range from $200,000-$500,000, while commercial properties start at $500,000+. Contact us for current market data specific to your investment criteria.`,
@@ -137,6 +143,30 @@ export default async function LocationPage({ params }: Props) {
             sizes="100vw"
           />
       </section>
+
+      {/* Local Market Intelligence (richSections) */}
+      {enrichment && enrichment.richSections.length > 0 && (
+        <section className="py-16 md:py-20">
+          <div className="mx-auto max-w-7xl px-6 md:px-8">
+            <h2 className="font-heading text-3xl uppercase md:text-4xl">
+              {location.name} Market Intelligence for 1031 Exchange Investors
+            </h2>
+            {enrichment.richSections.map((section, index) => (
+              <div key={index} className={section.heading ? "mt-12" : "mt-6"}>
+                {section.heading && (
+                  <h3 className="font-heading text-xl uppercase">
+                    {section.heading}
+                  </h3>
+                )}
+                <div
+                  className={`${section.heading ? "mt-4" : ""} max-w-4xl text-base leading-relaxed text-gray-600 prose prose-gray`}
+                  dangerouslySetInnerHTML={{ __html: section.html }}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Community Overview */}
       <section className="py-16 md:py-20">
