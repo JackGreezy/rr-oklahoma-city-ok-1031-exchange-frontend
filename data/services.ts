@@ -1,6 +1,101 @@
 import type { ServiceItem } from "./types";
 
 export const servicesData: ServiceItem[] = [
+  {
+    slug: "replacement-property-identification",
+    name: "Nationwide Replacement Property Identification",
+    short: "Identify replacement properties across all fifty states for your 1031 exchange.",
+    route: "/services/replacement-property-identification",
+    category: "Execution",
+  },
+  // Guides - Tax Deferral
+  {
+    slug: "capital-gains-on-rental-property",
+    name: "Capital Gains Tax on Rental Property",
+    short: "How gain on a rental property is calculated, and how a 1031 exchange can defer the tax bill.",
+    route: "/services/capital-gains-on-rental-property",
+    category: "Guides",
+  },
+  {
+    slug: "inherited-property-capital-gains",
+    name: "Capital Gains Tax on Inherited Property",
+    short: "How the stepped-up basis rule changes gain on inherited real estate, and when an exchange still helps.",
+    route: "/services/inherited-property-capital-gains",
+    category: "Guides",
+  },
+  {
+    slug: "passive-real-estate-income",
+    name: "Passive Real Estate Income",
+    short: "What passive real estate income actually means, and which structures qualify for 1031 treatment.",
+    route: "/services/passive-real-estate-income",
+    category: "Guides",
+  },
+  // Execution
+  {
+    slug: "qualified-intermediary-coordination",
+    name: "Qualified Intermediary Coordination",
+    short: "Coordinate with qualified intermediaries for compliant exchange execution.",
+    route: "/services/qualified-intermediary-coordination",
+    category: "Execution",
+  },
+  {
+    slug: "what-is-an-nnn-lease",
+    name: "What Is an NNN Lease",
+    short: "A plain-law breakdown of net, double net, and triple net lease structures.",
+    route: "/services/what-is-an-nnn-lease",
+    category: "Guides",
+  },
+  {
+    slug: "how-to-reduce-capital-gains-tax",
+    name: "How to Reduce Capital Gains Tax",
+    short: "A plain-law survey of the legitimate ways to reduce or defer capital gains tax on real estate.",
+    route: "/services/how-to-reduce-capital-gains-tax",
+    category: "Guides",
+  },
+  {
+    slug: "reverse-1031-exchange-explained",
+    name: "Reverse 1031 Exchange Explained",
+    short: "How the exchange-first structure works under the IRS safe harbor, in plain law terms.",
+    route: "/services/reverse-1031-exchange-explained",
+    category: "Guides",
+  },
+  {
+    slug: "the-180-day-exchange-deadline",
+    name: "The 180-Day Exchange Deadline",
+    short: "How the second statutory clock in a 1031 exchange is calculated, and where it can quietly shrink.",
+    route: "/services/the-180-day-exchange-deadline",
+    category: "Guides",
+  },
+  // Structures
+  {
+    slug: "three-property-identification",
+    name: "Three Property Identification Strategy",
+    short: "Identify up to three replacement properties within your 45 day deadline.",
+    route: "/services/three-property-identification",
+    category: "Structures",
+  },
+  {
+    slug: "the-qualified-intermediary-role",
+    name: "The Qualified Intermediary Role",
+    short: "What a qualified intermediary actually does in a 1031 exchange, and why the role cannot be filled casually.",
+    route: "/services/the-qualified-intermediary-role",
+    category: "Guides",
+  },
+  {
+    slug: "capital-gains-on-investment-property",
+    name: "Capital Gains Tax on Investment Property",
+    short: "What triggers capital gains tax on investment real estate, and where a like-kind exchange fits.",
+    route: "/services/capital-gains-on-investment-property",
+    category: "Guides",
+  },
+  // Guides
+  {
+    slug: "the-45-day-identification-period",
+    name: "The 45-Day Identification Period",
+    short: "A plain-law explainer on the identification clock every 1031 exchange in Oklahoma City, OK must satisfy.",
+    route: "/services/the-45-day-identification-period",
+    category: "Guides",
+  },
   // Timelines
   {
     slug: "45-day-identification-support",
@@ -23,49 +118,12 @@ export const servicesData: ServiceItem[] = [
     route: "/services/reverse-exchange-timeline",
     category: "Timelines",
   },
-  // Structures
-  {
-    slug: "three-property-identification",
-    name: "Three Property Identification Strategy",
-    short: "Identify up to three replacement properties within your 45 day deadline.",
-    route: "/services/three-property-identification",
-    category: "Structures",
-  },
-  {
-    slug: "200-percent-identification-rule",
-    name: "200 Percent Identification Rule",
-    short: "Identify multiple properties using the 200 percent of fair market value rule.",
-    route: "/services/200-percent-identification-rule",
-    category: "Structures",
-  },
-  {
-    slug: "95-percent-identification-exception",
-    name: "95 Percent Identification Exception",
-    short: "Identify unlimited properties if you acquire 95 percent of identified value.",
-    route: "/services/95-percent-identification-exception",
-    category: "Structures",
-  },
   {
     slug: "improvement-exchange-structure",
     name: "Improvement Exchange Structure",
     short: "Structure improvement exchanges with construction timelines and cost estimates.",
     route: "/services/improvement-exchange-structure",
     category: "Structures",
-  },
-  // Execution
-  {
-    slug: "qualified-intermediary-coordination",
-    name: "Qualified Intermediary Coordination",
-    short: "Coordinate with qualified intermediaries for compliant exchange execution.",
-    route: "/services/qualified-intermediary-coordination",
-    category: "Execution",
-  },
-  {
-    slug: "replacement-property-identification",
-    name: "Nationwide Replacement Property Identification",
-    short: "Identify replacement properties across all fifty states for your 1031 exchange.",
-    route: "/services/replacement-property-identification",
-    category: "Execution",
   },
   {
     slug: "escrow-account-coordination",
@@ -162,21 +220,6 @@ export const servicesData: ServiceItem[] = [
     route: "/services/identification-rules-explainer",
     category: "Education",
   },
-  // Guides
-  {
-    slug: "the-45-day-identification-period",
-    name: "The 45-Day Identification Period",
-    short: "A plain-law explainer on the identification clock every 1031 exchange in Oklahoma City, OK must satisfy.",
-    route: "/services/the-45-day-identification-period",
-    category: "Guides",
-  },
-  {
-    slug: "the-180-day-exchange-deadline",
-    name: "The 180-Day Exchange Deadline",
-    short: "How the second statutory clock in a 1031 exchange is calculated, and where it can quietly shrink.",
-    route: "/services/the-180-day-exchange-deadline",
-    category: "Guides",
-  },
   {
     slug: "what-is-boot-in-a-1031-exchange",
     name: "What Is Boot in a 1031 Exchange",
@@ -185,24 +228,10 @@ export const servicesData: ServiceItem[] = [
     category: "Guides",
   },
   {
-    slug: "the-qualified-intermediary-role",
-    name: "The Qualified Intermediary Role",
-    short: "What a qualified intermediary actually does in a 1031 exchange, and why the role cannot be filled casually.",
-    route: "/services/the-qualified-intermediary-role",
-    category: "Guides",
-  },
-  {
     slug: "like-kind-property-explained",
     name: "Like-Kind Property Explained",
     short: "What counts as like-kind real property today, and where fractional replacement vehicles fit in.",
     route: "/services/like-kind-property-explained",
-    category: "Guides",
-  },
-  {
-    slug: "reverse-1031-exchange-explained",
-    name: "Reverse 1031 Exchange Explained",
-    short: "How the exchange-first structure works under the IRS safe harbor, in plain law terms.",
-    route: "/services/reverse-1031-exchange-explained",
     category: "Guides",
   },
   {
@@ -217,21 +246,6 @@ export const servicesData: ServiceItem[] = [
     name: "Related-Party 1031 Exchange Rules",
     short: "Why exchanges between family members or affiliated entities carry a two-year holding requirement.",
     route: "/services/related-party-1031-exchange-rules",
-    category: "Guides",
-  },
-  // Guides - Tax Deferral
-  {
-    slug: "capital-gains-on-rental-property",
-    name: "Capital Gains Tax on Rental Property",
-    short: "How gain on a rental property is calculated, and how a 1031 exchange can defer the tax bill.",
-    route: "/services/capital-gains-on-rental-property",
-    category: "Guides",
-  },
-  {
-    slug: "capital-gains-on-investment-property",
-    name: "Capital Gains Tax on Investment Property",
-    short: "What triggers capital gains tax on investment real estate, and where a like-kind exchange fits.",
-    route: "/services/capital-gains-on-investment-property",
     category: "Guides",
   },
   {
@@ -249,13 +263,6 @@ export const servicesData: ServiceItem[] = [
     category: "Guides",
   },
   {
-    slug: "inherited-property-capital-gains",
-    name: "Capital Gains Tax on Inherited Property",
-    short: "How the stepped-up basis rule changes gain on inherited real estate, and when an exchange still helps.",
-    route: "/services/inherited-property-capital-gains",
-    category: "Guides",
-  },
-  {
     slug: "depreciation-recapture-explained",
     name: "Depreciation Recapture Explained",
     short: "Why prior depreciation deductions create their own tax bill at sale, separate from capital gains.",
@@ -269,26 +276,12 @@ export const servicesData: ServiceItem[] = [
     route: "/services/section-121-exclusion-explained",
     category: "Guides",
   },
-  {
-    slug: "how-to-reduce-capital-gains-tax",
-    name: "How to Reduce Capital Gains Tax",
-    short: "A plain-law survey of the legitimate ways to reduce or defer capital gains tax on real estate.",
-    route: "/services/how-to-reduce-capital-gains-tax",
-    category: "Guides",
-  },
   // Guides - Investing
   {
     slug: "how-to-invest-in-real-estate",
     name: "How to Invest in Real Estate",
     short: "The main paths into real estate investing, from direct ownership to passive DST interests.",
     route: "/services/how-to-invest-in-real-estate",
-    category: "Guides",
-  },
-  {
-    slug: "passive-real-estate-income",
-    name: "Passive Real Estate Income",
-    short: "What passive real estate income actually means, and which structures qualify for 1031 treatment.",
-    route: "/services/passive-real-estate-income",
     category: "Guides",
   },
   {
@@ -342,13 +335,6 @@ export const servicesData: ServiceItem[] = [
     category: "Guides",
   },
   {
-    slug: "what-is-an-nnn-lease",
-    name: "What Is an NNN Lease",
-    short: "A plain-law breakdown of net, double net, and triple net lease structures.",
-    route: "/services/what-is-an-nnn-lease",
-    category: "Guides",
-  },
-  {
     slug: "self-storage-investing",
     name: "Self Storage Investing",
     short: "What makes self storage a distinct asset class, and how it fits a 1031 replacement strategy.",
@@ -390,6 +376,19 @@ export const servicesData: ServiceItem[] = [
     route: "/services/medical-office-investing",
     category: "Guides",
   },
-];
+  {
+    slug: "200-percent-identification-rule",
+    name: "200 Percent Identification Rule",
+    short: "Identify multiple properties using the 200 percent of fair market value rule.",
+    route: "/services/200-percent-identification-rule",
+    category: "Structures",
+  },
+  {
+    slug: "95-percent-identification-exception",
+    name: "95 Percent Identification Exception",
+    short: "Identify unlimited properties if you acquire 95 percent of identified value.",
+    route: "/services/95-percent-identification-exception",
+    category: "Structures",
+  },];
 
 
