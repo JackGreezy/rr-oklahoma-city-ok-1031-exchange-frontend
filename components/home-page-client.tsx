@@ -402,7 +402,9 @@ export default function HomePageClient() {
               </h2>
           <div className="mt-12">
             <Carousel itemsPerView={3} viewAllHref="/services" viewAllText="View All">
-              {servicesData.map((service) => (
+              {servicesData
+                .filter((service) => !/(?:three-property|200-percent|95-percent)/.test(service.slug))
+                .map((service) => (
                 <Link
                   key={service.slug}
                   href={service.route}
@@ -426,7 +428,7 @@ export default function HomePageClient() {
                     <p className="mt-2 text-sm text-gray-400 line-clamp-2">{service.short}</p>
                     </div>
                 </Link>
-              ))}
+                ))}
             </Carousel>
             </div>
             </div>
