@@ -1,4 +1,3 @@
-import ExchangeIntentSection from "../components/ExchangeIntentSection";
 import type { Metadata } from "next";
 import HomePageClient from "@/components/home-page-client";
 
@@ -28,5 +27,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <><HomePageClient /><ExchangeIntentSection /></>;
+  return <HomePageClient />;
 }
