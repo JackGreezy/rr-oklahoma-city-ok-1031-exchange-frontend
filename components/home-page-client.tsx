@@ -346,17 +346,8 @@ export default function HomePageClient() {
                 <br />
                 1031 Exchange Team
               </h2>
-              <p className="mt-6 text-base leading-relaxed text-gray-600">
-                Our team was founded with a singular mission: to help Oklahoma property owners navigate 
-                the complexities of 1031 exchanges with confidence. As Oklahoma real estate specialists, 
-                we approach the state&apos;s investment landscape with deep local knowledge, established 
-                qualified intermediary relationships, and forward-thinking strategies.
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-gray-600">
-                We possess extensive knowledge regarding Oklahoma City, Tulsa, Norman, Edmond, and 
-                all Oklahoma markets. Together, our network has facilitated over $4 billion in 
-                exchange transactions with a 100% compliance record.
-              </p>
+              <p className="mt-6 text-base leading-relaxed text-gray-600">An Oklahoma City owner may be leaving a rental portfolio, retail property, industrial asset, or inherited real estate because management, maintenance, or concentrated equity has changed the plan. We build the exchange around sale timing, proceeds, debt, income needs, control, workload, and replacement choices that can actually close.</p>
+              <p className="mt-4 text-base leading-relaxed text-gray-600">DST interests may replace hands-on property work with fractional access to professionally managed, institutional-quality assets. Oklahoma City sellers may see offerings beginning near $100,000, but current availability, forecast income, sponsor and property risk, fees, leverage, liquidity limits, eligibility, and suitability differ.</p>
               <Link href="/about" className="btn-primary mt-8">
                 Meet The Team
               </Link>
@@ -397,9 +388,7 @@ export default function HomePageClient() {
       {/* Featured Services Section (Dark) */}
       <section className="section-dark py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <h2 className="font-heading text-center text-4xl uppercase md:text-5xl">
-            Featured Services
-              </h2>
+          <h2 className="font-heading text-center text-4xl uppercase md:text-5xl">Oklahoma City 1031 Exchange Solutions</h2>
           <div className="mt-12">
             <Carousel itemsPerView={3} viewAllHref="/services" viewAllText="View All">
               {servicesData
@@ -455,9 +444,7 @@ export default function HomePageClient() {
                 <br />
                 Exchanges Work
                 </h2>
-              <Link href="/services" className="btn-outline mt-8 border-white text-white hover:bg-white hover:text-gray-900">
-                View All
-              </Link>
+              <Link href="/contact?request=guide" className="btn-outline mt-8 border-white text-white hover:bg-white hover:text-gray-900">Get Free Oklahoma City 1031 Information</Link>
               </div>
 
             <div className="relative min-h-[280px]">
@@ -539,7 +526,7 @@ export default function HomePageClient() {
           </div>
       </section>
 
-      {/* Property Types Section (Light) */}
+      {/* Real Estate Ownership Without Daily Operations Section (Light) */}
       <section className="bg-white py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <h2 className="font-heading text-center text-4xl uppercase md:text-5xl">
@@ -686,9 +673,7 @@ export default function HomePageClient() {
               experience, deep community ties and forward thinking. Contact us today to get 
               started on your 1031 exchange journey with Oklahoma&apos;s leading experts.
             </p>
-            <Link href="/contact" className="btn-primary mt-8 bg-white text-gray-900 hover:bg-gray-100">
-              Contact Us
-            </Link>
+            <Link href="/contact" className="btn-primary mt-8 bg-white text-gray-900 hover:bg-gray-100">Talk Through the Oklahoma City Sale</Link>
           </motion.div>
         </div>
       </section>
@@ -750,11 +735,11 @@ export default function HomePageClient() {
                 {EMAIL}
               </a>
             <Link
-                href="/contact"
+                href="/contact?request=properties"
                 className="btn-primary mt-4 w-full"
                 onClick={() => setContactOpen(false)}
             >
-                Contact Form
+                Request the Oklahoma City Property List
             </Link>
           </div>
           </motion.div>
