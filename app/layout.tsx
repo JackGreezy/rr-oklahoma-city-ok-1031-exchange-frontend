@@ -21,11 +21,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Statewide Qualified Intermediary Network`,
+    default: "1031 Exchange Oklahoma City | Property Solutions",
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "1031 exchange guidance for Oklahoma property owners. Local intermediary coordination, CPA and attorney support, and deadline compliance for investors across Oklahoma City and beyond.",
+    "Selling Oklahoma City investment real estate? Start the exchange early, compare ownership paths, and request available replacement options.",
   icons: {
     icon: [
       { url: "/favicon/favicon.ico", sizes: "any" },
@@ -42,18 +42,20 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon/site.webmanifest",
   openGraph: {
-    title: SITE_NAME,
+    title: "1031 Exchange Oklahoma City | Property Solutions",
     description:
-      "Trusted 1031 specialists helping Oklahoma investors navigate deadlines and compliance. Local service, state coverage.",
+      "Selling Oklahoma City investment real estate? Start the exchange early, compare ownership paths, and request available replacement options.",
     url: SITE_URL,
     siteName: SITE_NAME,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: SITE_NAME,
-    description: "Learn how to defer capital gains taxes with a compliant 1031 exchange in Oklahoma.",
+    title: "1031 Exchange Oklahoma City | Property Solutions",
+    description: "Selling Oklahoma City investment real estate? Start the exchange early, compare ownership paths, and request available replacement options.",
   },
+
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({

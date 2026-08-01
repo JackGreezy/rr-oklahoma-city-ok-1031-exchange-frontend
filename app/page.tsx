@@ -3,13 +3,13 @@ import HomePageClient from "@/components/home-page-client";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.1031exchangeoklahomacity.com"),
-  title: "Oklahoma City 1031 Exchange Experts | Statewide Qualified Intermediary Network",
+  title: "1031 Exchange Oklahoma City | Property Solutions",
   description:
-    "1031 exchange guidance for Oklahoma property owners. Local intermediary coordination, CPA and attorney support, and deadline compliance for investors across Oklahoma City and beyond.",
+    "Selling Oklahoma City investment real estate? Start the exchange early, compare ownership paths, and request available replacement options.",
   openGraph: {
-    title: "Oklahoma City 1031 Exchange Experts",
+    title: "1031 Exchange Oklahoma City | Property Solutions",
     description:
-      "Trusted 1031 specialists helping Oklahoma investors navigate deadlines and compliance. Local service, state coverage.",
+      "Selling Oklahoma City investment real estate? Start the exchange early, compare ownership paths, and request available replacement options.",
     url: "https://www.1031exchangeoklahomacity.com/",
     siteName: "1031 Exchange Oklahoma City",
     images: ["/og-image.png"],
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oklahoma City 1031 Exchange Experts",
-    description: "Learn how to defer capital gains taxes with a compliant 1031 exchange in Oklahoma.",
+    title: "1031 Exchange Oklahoma City | Property Solutions",
+    description: "Selling Oklahoma City investment real estate? Start the exchange early, compare ownership paths, and request available replacement options.",
     images: ["/og-image.png"],
   },
   alternates: {
