@@ -348,8 +348,8 @@ export default function HomePageClient() {
               </h2>
               <p className="mt-6 text-base leading-relaxed text-gray-600">An Oklahoma City owner may be leaving a rental portfolio, retail property, industrial asset, or inherited real estate because management, maintenance, or concentrated equity has changed the plan. We build the exchange around sale timing, proceeds, debt, income needs, control, workload, and replacement choices that can actually close.</p>
               <p className="mt-4 text-base leading-relaxed text-gray-600">DST interests may replace hands-on property work with fractional access to professionally managed, institutional-quality assets. Oklahoma City sellers may see offerings beginning near $100,000, but current availability, forecast income, sponsor and property risk, fees, leverage, liquidity limits, eligibility, and suitability differ.</p>
-              <Link href="/about" className="btn-primary mt-8">
-                Meet The Team
+              <Link href="/contact?request=properties" className="btn-primary mt-8">
+                Request the Oklahoma City Property List
               </Link>
             </motion.div>
           </div>
