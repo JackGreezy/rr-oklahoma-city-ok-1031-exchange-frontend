@@ -9,8 +9,8 @@ export const SITE_URL = "https://www.1031exchangeoklahomacity.com";
 export const SITE_NAME = "1031 Exchange Oklahoma City";
 
 // Contact information
-export const PHONE_NUMBER = "(832) 743-1964";
-export const PHONE_HREF = "tel:+18327431964";
+export const PHONE_NUMBER = "(405) 369-4895";
+export const PHONE_HREF = "tel:+14053694895";
 export const EMAIL = "info@1031exchangeoklahomacity.com";
 export const OFFICE_HOURS = "Monday - Friday, 8:00 AM to 6:00 PM CST";
 export const OFFICE_ADDRESS = "701 N Broadway Ave, Oklahoma City, OK 73102";
@@ -23,4 +23,3 @@ export const MAP_CENTER = {
 
 // Timezone for deadline calculators
 export const TIMEZONE = "America/Chicago"; // Central Time
-

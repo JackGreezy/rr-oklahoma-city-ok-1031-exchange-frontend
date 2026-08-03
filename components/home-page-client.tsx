@@ -164,7 +164,7 @@ export default function HomePageClient() {
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_URL,
-    telephone: "+18327431964",
+    telephone: "+14053694895",
     email: EMAIL,
     address: {
       "@type": "PostalAddress",
