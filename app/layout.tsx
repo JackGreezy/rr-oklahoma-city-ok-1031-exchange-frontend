@@ -4,7 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { SITE_NAME, SITE_URL } from "@/lib/config";
+import StickyCall from "@/components/StickyCall";
+import { PHONE_NUMBER, SITE_NAME, SITE_URL } from "@/lib/config";
 
 const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
@@ -21,11 +22,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "1031 Exchange Oklahoma City | Property Solutions",
+    default: "1031 Exchange Oklahoma City, OK | Free Exchange Guidance",
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Selling Oklahoma City investment real estate? Start the exchange early, compare ownership paths, and request available replacement options.",
+    "Selling investment or inherited property in Oklahoma City? Get free 1031 exchange guidance and request current replacement property and DST options.",
   icons: {
     icon: [
       { url: "/favicon/favicon.ico", sizes: "any" },
@@ -42,17 +43,17 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon/site.webmanifest",
   openGraph: {
-    title: "1031 Exchange Oklahoma City | Property Solutions",
+    title: "1031 Exchange Oklahoma City, OK | Free Exchange Guidance",
     description:
-      "Selling Oklahoma City investment real estate? Start the exchange early, compare ownership paths, and request available replacement options.",
+      "Selling investment or inherited property in Oklahoma City? Get free 1031 exchange guidance and request current replacement property and DST options.",
     url: SITE_URL,
     siteName: SITE_NAME,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "1031 Exchange Oklahoma City | Property Solutions",
-    description: "Selling Oklahoma City investment real estate? Start the exchange early, compare ownership paths, and request available replacement options.",
+    title: "1031 Exchange Oklahoma City, OK | Free Exchange Guidance",
+    description: "Selling investment or inherited property in Oklahoma City? Get free 1031 exchange guidance and request current replacement property and DST options.",
   },
 
   alternates: { canonical: "/" },
@@ -69,6 +70,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <StickyCall phone={PHONE_NUMBER} />
         <Analytics />
       </body>
     </html>

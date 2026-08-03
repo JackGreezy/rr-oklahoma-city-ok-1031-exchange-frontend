@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { servicesData } from "@/data/services";
 import { locationsData } from "@/data/locations";
-import { SITE_NAME } from "@/lib/config";
+import { PHONE_HREF, PHONE_NUMBER } from "@/lib/config";
 
 const tools = [
   { name: "Boot Calculator", href: "/tools/boot-calculator" },
@@ -42,6 +42,13 @@ export default function Header() {
     return () => document.removeEventListener("keydown", handleEscape);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   // Determine header style based on scroll and page
   const headerBg = isHomePage && !scrolled
     ? "bg-transparent"
@@ -63,13 +70,13 @@ export default function Header() {
           <div className={`font-heading text-lg tracking-wider ${logoColor} md:text-xl`}>
             <span className="font-heading">1031 EXCHANGE OKC</span>
             <span className={`mt-0.5 block text-[10px] font-normal tracking-[0.2em] ${isHomePage && !scrolled ? "text-white/70" : "text-gray-500"}`}>
-              Oklahoma City Qualified Intermediary
+              Oklahoma City 1031 Exchange Solutions
             </span>
           </div>
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className={`hidden items-center gap-8 text-sm font-medium ${textColor} lg:flex`}>
+        <nav className={`hidden items-center gap-5 text-sm font-medium xl:gap-7 ${textColor} lg:flex`}>
           <Link 
             className="transition-opacity hover:opacity-70" 
             href="/services"
@@ -80,7 +87,7 @@ export default function Header() {
             className="transition-opacity hover:opacity-70" 
             href="/service-areas"
           >
-            Neighborhoods
+            Service Areas
           </Link>
           <Link 
             className="transition-opacity hover:opacity-70" 
@@ -100,30 +107,23 @@ export default function Header() {
           >
             Blog
           </Link>
-          <Link 
-            className="transition-opacity hover:opacity-70" 
-            href="/contact"
+          <a
+            className={`border px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] transition-colors ${
+              isHomePage && !scrolled
+                ? "border-white/60 hover:bg-white hover:text-gray-900"
+                : "border-gray-300 hover:border-gray-900"
+            }`}
+            href={PHONE_HREF}
           >
-            Contact Us
+            Call {PHONE_NUMBER}
+          </a>
+          <Link className="transition-opacity hover:opacity-70" href="/contact">
+            Contact
           </Link>
         </nav>
 
         {/* Menu dots / hamburger */}
         <div className="flex items-center gap-4">
-          {/* Desktop menu dots (decorative) */}
-          <button
-            type="button"
-            className={`hidden p-2 lg:block ${textColor}`}
-            aria-label="More options"
-          >
-            <div className="grid grid-cols-2 gap-1">
-              <span className={`h-1 w-1 rounded-full ${isHomePage && !scrolled ? "bg-white" : "bg-gray-900"}`} />
-              <span className={`h-1 w-1 rounded-full ${isHomePage && !scrolled ? "bg-white" : "bg-gray-900"}`} />
-              <span className={`h-1 w-1 rounded-full ${isHomePage && !scrolled ? "bg-white" : "bg-gray-900"}`} />
-              <span className={`h-1 w-1 rounded-full ${isHomePage && !scrolled ? "bg-white" : "bg-gray-900"}`} />
-            </div>
-          </button>
-
           {/* Mobile menu button */}
           <button
             type="button"
@@ -147,7 +147,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-gray-100 bg-white lg:hidden">
+        <div className="max-h-[calc(100vh-76px)] overflow-y-auto border-t border-gray-100 bg-white text-gray-900 lg:hidden">
           <nav className="mx-auto max-w-7xl px-6 py-6">
             <div className="space-y-6">
               <div>
@@ -180,7 +180,7 @@ export default function Header() {
 
               <div>
                 <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
-                  Neighborhoods
+                  Service Areas
                 </h3>
                 <ul className="space-y-2">
                   {locationsData.slice(0, 6).map((location) => (
@@ -200,7 +200,7 @@ export default function Header() {
                       className="block text-sm font-semibold text-gray-900"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      View All Neighborhoods
+                      View All Service Areas
                     </Link>
                   </li>
                 </ul>
@@ -255,13 +255,22 @@ export default function Header() {
                     </Link>
                   </li>
                 </ul>
-                <Link
-                  href="/contact"
-                  className="btn-primary mt-6 w-full"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Contact Us
-                </Link>
+                <div className="mt-6 grid gap-3">
+                  <a
+                    href={PHONE_HREF}
+                    className="btn-primary w-full"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Call {PHONE_NUMBER}
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="btn-outline w-full"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Get Free Guidance
+                  </Link>
+                </div>
               </div>
             </div>
           </nav>

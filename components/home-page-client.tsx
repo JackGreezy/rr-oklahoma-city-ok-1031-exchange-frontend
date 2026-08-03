@@ -1,273 +1,190 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback, useMemo } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
-import { motion, AnimatePresence } from "framer-motion";
-import { servicesData } from "@/data/services";
+import { motion } from "framer-motion";
+import { ContactFormWrapper } from "@/app/contact/contact-form";
 import { locationsData } from "@/data/locations";
-import { propertyTypesData } from "@/data/property-types";
-import { PHONE_NUMBER, PHONE_HREF, EMAIL, SITE_NAME } from "@/lib/config";
+import {
+  EMAIL,
+  PHONE_HREF,
+  PHONE_NUMBER,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/config";
 
-// Rolling number component with smooth animation
-function RollingNumber({
-  target,
-  prefix = "",
-  suffix = "",
-  duration = 2000,
-}: {
-  target: number;
-  prefix?: string;
-  suffix?: string;
-  duration?: number;
-}) {
-  const [current, setCurrent] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          const startTime = Date.now();
-          const animate = () => {
-            const elapsed = Date.now() - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const easeOut = 1 - Math.pow(1 - progress, 3);
-            setCurrent(Math.floor(target * easeOut));
-            if (progress < 1) {
-              requestAnimationFrame(animate);
-            }
-          };
-          requestAnimationFrame(animate);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [target, duration, hasAnimated]);
-
-  return (
-    <span ref={ref} className="tabular-nums">
-      {prefix}
-      {current.toLocaleString()}
-      {suffix}
-    </span>
-  );
-}
-
-// Improved Carousel component that cycles through all items infinitely
-function Carousel({
-  children,
-  itemsPerView = 3,
-  viewAllHref,
-  viewAllText = "View All",
-}: {
-  children: React.ReactNode[];
-  itemsPerView?: number;
-  viewAllHref: string;
-  viewAllText?: string;
-}) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const totalItems = children.length;
-
-  // Calculate proper width percentage based on items per view
-  const itemWidth = 100 / itemsPerView;
-
-  const next = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % totalItems);
-  }, [totalItems]);
-
-  const prev = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + totalItems) % totalItems);
-  }, [totalItems]);
-
-  // Create infinite scroll effect by tripling the items
-  const extendedChildren = useMemo(() => {
-    return [...children, ...children, ...children];
-  }, [children]);
-
-  return (
-    <div className="relative">
-      <div className="overflow-hidden">
-        <motion.div
-          className="flex"
-          style={{ gap: "1.5rem" }}
-          animate={{ 
-            x: `calc(-${(currentIndex + totalItems) * itemWidth}% - ${(currentIndex + totalItems) * 1.5}rem)` 
-          }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        >
-          {extendedChildren.map((child, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0"
-              style={{ width: `calc(${itemWidth}% - 1rem)` }}
-            >
-              {child}
-            </div>
-          ))}
-        </motion.div>
-      </div>
-      
-      {/* Controls */}
-      <div className="mt-8 flex items-center justify-between">
-        <Link href={viewAllHref} className="btn-primary">
-          {viewAllText}
-        </Link>
-        
-        {/* Progress line */}
-        <div className="hidden flex-1 mx-8 md:block">
-          <div className="h-px bg-gray-700 relative">
-            <motion.div 
-              className="absolute top-0 left-0 h-px bg-white"
-              style={{ width: `${((currentIndex % totalItems) + 1) / totalItems * 100}%` }}
-              transition={{ duration: 0.3 }}
-            />
-          </div>
-        </div>
-        
-        <div className="carousel-nav">
-          <button onClick={prev} aria-label="Previous">
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button onClick={next} aria-label="Next">
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// Benefits data for rotating display
-const benefits = [
+const situations = [
   {
-    title: "Defer 100% of Capital Gains Tax",
-    description:
-      "A properly structured 1031 exchange allows you to defer all federal capital gains taxes, keeping more of your investment working for you.",
+    title: "Planning to Sell",
+    text: "Start before accepting an offer so the exchange team, sale timing, expected equity, debt and replacement criteria can be organized early.",
+    href: "/services/exchange-planning-consultation",
   },
   {
-    title: "Compound Your Wealth Faster",
-    description:
-      "By deferring taxes, you can reinvest the full sale proceeds into a higher-value property, accelerating your wealth building over time.",
+    title: "Already Under Contract",
+    text: "The qualified intermediary must be engaged before the sale closes. Get the current contract and closing date reviewed now.",
+    href: "/services/qualified-intermediary-coordination",
   },
   {
-    title: "Upgrade to Better Properties",
-    description:
-      "Exchange into higher quality assets, better locations, or properties with stronger cash flow potential without the tax penalty.",
+    title: "Selling Inherited Property",
+    text: "Clarify basis, ownership, investment use and the goals of every owner before choosing between a taxable sale and an exchange.",
+    href: "/services/inherited-property-capital-gains",
   },
   {
-    title: "Diversify Your Portfolio",
-    description:
-      "Use 1031 exchanges to spread your investments across different markets, property types, and risk profiles tax-efficiently.",
+    title: "Tired of Managing Rentals",
+    text: "Compare another direct property with net-lease and professionally managed DST options that do not require day-to-day landlord work.",
+    href: "/services/passive-real-estate-income",
   },
   {
-    title: "Eliminate Depreciation Recapture",
-    description:
-      "Defer the 25% depreciation recapture tax that would otherwise be due when you sell an investment property.",
+    title: "Searching for Replacement Property",
+    text: "Build a focused search around equity, debt, projected income, control, management responsibility and realistic closing probability.",
+    href: "/services/replacement-property-identification",
   },
   {
-    title: "Pass Wealth to Heirs Tax-Free",
-    description:
-      "With a stepped-up basis at death, your heirs may never pay the deferred capital gains taxes, creating generational wealth.",
+    title: "Buying Before You Sell",
+    text: "Explore reverse-exchange structure, financing and titleholder requirements when the right replacement property appears first.",
+    href: "/services/reverse-exchange-timeline",
   },
 ];
 
-// Stats data
-const stats = [
-  { value: 4, prefix: "$", suffix: "B+", label: "Total Exchanges Facilitated" },
-  { value: 413, prefix: "$", suffix: "M+", label: "2025 Exchange Volume" },
-  { value: 45, suffix: "+", label: "Years Combined Experience" },
-  { value: 1, prefix: "#", suffix: "", label: "Oklahoma QI Partner" },
+const solutions = [
+  {
+    title: "Complete Exchange Solutions",
+    text: "Bring the sale, deadlines, independent qualified intermediary, advisors, financing and replacement search into one organized plan.",
+    href: "/services/exchange-planning-consultation",
+    image: "/locations/oklahoma-city-ok-1031-exchange.jpg",
+  },
+  {
+    title: "Replacement Property Search",
+    text: "Compare Oklahoma and nationwide real estate against a written brief instead of chasing properties that do not fit the exchange.",
+    href: "/services/replacement-property-identification",
+    image: "/locations/nationwide-1031-exchange.jpg",
+  },
+  {
+    title: "DST and Passive Options",
+    text: "Review professionally managed fractional real estate when reducing landlord work is a central goal of the exchange.",
+    href: "/services/dst-replacement-properties",
+    image: "/inventory/urgent-care-medical-clinic-oklahoma-1031-exchange.jpg",
+  },
+  {
+    title: "Qualified Intermediary Introduction",
+    text: "Get connected with an independent qualified intermediary before closing and keep the required document handoffs visible.",
+    href: "/services/qualified-intermediary-coordination",
+    image: "/locations/edmond-ok-1031-exchange.jpg",
+  },
+  {
+    title: "Inherited Property Guidance",
+    text: "Organize ownership, basis questions, qualifying use and co-owner priorities before a sale limits the available paths.",
+    href: "/services/inherited-property-capital-gains",
+    image: "/locations/norman-ok-1031-exchange.jpg",
+  },
+  {
+    title: "Reverse Exchange Solutions",
+    text: "Coordinate the titleholder, qualified intermediary, lender and closing timeline when replacement property must be acquired first.",
+    href: "/services/reverse-exchange-timeline",
+    image: "/inventory/last-mile-logistics-flex-oklahoma-1031-exchange.jpg",
+  },
 ];
 
-// Resources/Press items
-const resources = [
+const ownershipPaths = [
   {
-    title: "IRS Publication 544: Sales and Other Dispositions of Assets",
-    description: "Official IRS guidance on like-kind exchanges under Section 1031.",
-    source: "Internal Revenue Service",
-    date: "2024",
-    href: "https://www.irs.gov/publications/p544",
+    title: "Direct Real Estate",
+    text: "Maintain control over leasing, financing, improvements and disposition while continuing to manage the property directly or through a manager.",
+    href: "/property-types/commercial",
   },
   {
-    title: "Understanding the 45-Day Identification Period",
-    description: "Critical timeline requirements every exchanger must know to protect their deferral.",
-    source: "1031 Exchange Guide",
-    date: "January 2024",
-    href: "/blog",
+    title: "Net-Lease Property",
+    text: "Own a specific property with lease-defined tenant responsibilities while evaluating tenant credit, lease terms and future reletting risk.",
+    href: "/property-types/triple-net-nnn",
   },
   {
-    title: "Oklahoma Real Estate Market Outlook",
-    description: "Current trends and opportunities for replacement property investors in the Oklahoma market.",
-    source: "Market Analysis",
-    date: "2024",
-    href: "/blog",
+    title: "DST Interest",
+    text: "Exchange into professionally managed fractional real estate with less personal management, reduced control and important sponsor, fee and liquidity considerations.",
+    href: "/services/dst-replacement-properties",
+  },
+];
+
+const guides = [
+  {
+    title: "1031 Exchange Owner's Guide",
+    text: "Organize the sale facts, advisor questions, replacement criteria and exchange calendar before the transaction begins.",
+    href: "/contact?request=guide",
+    label: "Get the free guide",
+  },
+  {
+    title: "Selling Inherited Investment Property",
+    text: "Understand which ownership, basis and use questions should be answered before deciding whether an exchange fits.",
+    href: "/services/inherited-property-capital-gains",
+    label: "Read the guide",
+  },
+  {
+    title: "Direct Property or Passive DST?",
+    text: "Compare control, management, financing, liquidity and concentration before selecting the next ownership path.",
+    href: "/services/dst-replacement-properties",
+    label: "Compare the options",
+  },
+];
+
+const faqs = [
+  {
+    question: "When should an Oklahoma City owner start planning a 1031 exchange?",
+    answer:
+      "Start before the relinquished property closes, and preferably before accepting an offer. The independent qualified intermediary must be engaged before closing, and early planning leaves more time to clarify equity, debt, replacement criteria and financing.",
+  },
+  {
+    question: "Can you help someone who has never completed a 1031 exchange?",
+    answer:
+      "Yes. The first conversation can begin with the property being sold, the expected closing date and what the owner wants from the next investment. From there, the required professionals and replacement-property work can be organized around one plan.",
+  },
+  {
+    question: "Can a 1031 exchange reduce day-to-day property management?",
+    answer:
+      "Potentially. An owner can compare another directly owned property with net-lease real estate and professionally managed DST interests. Each path has different levels of control, workload, fees, risk and liquidity.",
+  },
+  {
+    question: "What is a DST replacement property?",
+    answer:
+      "A Delaware Statutory Trust can hold institutional-quality real estate and may qualify as replacement property for eligible investors. The sponsor manages the property, but the investor gives up direct control and must evaluate the offering documents, fees, leverage, property risk, illiquidity and suitability.",
+  },
+  {
+    question: "How much is needed for a DST investment?",
+    answer:
+      "Some current offerings may begin around $100,000, but minimums, availability, projected income, leverage and eligibility vary. A current property list is the best way to see what may fit a specific exchange.",
+  },
+  {
+    question: "Can inherited investment property be used in a 1031 exchange?",
+    answer:
+      "It may qualify when it is held for investment or productive business use, but inherited-property decisions often require basis, estate, ownership and co-owner questions to be reviewed with the appropriate tax and legal professionals first.",
   },
 ];
 
 export default function HomePageClient() {
-  const [currentBenefit, setCurrentBenefit] = useState(0);
-  const [contactOpen, setContactOpen] = useState(false);
-
-  // Rotate benefits every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBenefit((prev) => (prev + 1) % benefits.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const nextBenefit = useCallback(() => {
-    setCurrentBenefit((prev) => (prev + 1) % benefits.length);
-  }, []);
-
-  const prevBenefit = useCallback(() => {
-    setCurrentBenefit((prev) => (prev - 1 + benefits.length) % benefits.length);
-  }, []);
-
-  // Schema.org structured data
-  const organizationLd = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: "https://www.1031exchangeoklahomacity.com/",
-      telephone: "+18327431964",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "701 N Broadway Ave",
-        addressLocality: "Oklahoma City",
-        addressRegion: "OK",
-        postalCode: "73102",
-        addressCountry: "US",
-      },
-      description:
-        "Oklahoma intermediary coordination, CPA and attorney support, and statewide 1031 exchange guidance.",
-    }),
-    []
-  );
+  const organizationLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: SITE_URL,
+    telephone: "+18327431964",
+    email: EMAIL,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "701 N Broadway Ave",
+      addressLocality: "Oklahoma City",
+      addressRegion: "OK",
+      postalCode: "73102",
+      addressCountry: "US",
+    },
+    description:
+      "Turnkey 1031 exchange guidance, professional introductions and replacement property solutions for Oklahoma City investment property owners.",
+  };
 
   return (
-    <div className="font-body">
+    <div className="overflow-x-hidden font-body">
       <Script id="jsonld-org" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(organizationLd)}
       </Script>
 
-      {/* Hero Section with Video Background */}
-      <section className="relative h-screen min-h-[600px] overflow-hidden">
+      <section className="relative min-h-[720px] overflow-hidden md:h-screen md:min-h-[720px]">
         <video
           autoPlay
           muted
@@ -278,473 +195,422 @@ export default function HomePageClient() {
         >
           <source src="/lame bum fuck ofc .mp4" type="video/mp4" />
         </video>
-        
         <div className="hero-overlay absolute inset-0" />
-        
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
-            <motion.div
-            initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <h1 className="font-heading text-5xl leading-none tracking-wide md:text-7xl lg:text-8xl">
-              #1 OKLAHOMA CITY
-              <br />
-              1031 EXCHANGE EXPERTS
-              </h1>
-            <p className="mt-6 text-sm font-medium uppercase tracking-[0.3em] text-white/90">
-              Defer Taxes. Build Wealth. Invest Smarter.
-              </p>
-            </motion.div>
-        </div>
 
-            <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-xs uppercase tracking-widest text-white/60">Scroll</span>
-            <motion.div
-              className="h-12 w-px bg-white/40"
-              animate={{ scaleY: [0.5, 1, 0.5] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
-            />
-                </div>
-        </motion.div>
-      </section>
-
-      {/* Meet the Team Section */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative aspect-[4/3] overflow-hidden"
-            >
-              <Image
-                src="/oklahoma-city-hero.jpg"
-                alt="Oklahoma City skyline - 1031 Exchange experts"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="font-heading text-4xl uppercase leading-tight md:text-5xl">
-                Meet The Oklahoma City
-                <br />
-                1031 Exchange Team
-              </h2>
-              <p className="mt-6 text-base leading-relaxed text-gray-600">An Oklahoma City owner may be leaving a rental portfolio, retail property, industrial asset, or inherited real estate because management, maintenance, or concentrated equity has changed the plan. We build the exchange around sale timing, proceeds, debt, income needs, control, workload, and replacement choices that can actually close.</p>
-              <p className="mt-4 text-base leading-relaxed text-gray-600">DST interests may replace hands-on property work with fractional access to professionally managed, institutional-quality assets. Oklahoma City sellers may see offerings beginning near $100,000, but current availability, forecast income, sponsor and property risk, fees, leverage, liquidity limits, eligibility, and suitability differ.</p>
-              <Link href="/contact?request=properties" className="btn-primary mt-8">
-                Request the Oklahoma City Property List
-              </Link>
-            </motion.div>
-          </div>
-          </div>
-        </section>
-
-      {/* Stats Section */}
-      <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <h2 className="font-heading text-center text-4xl uppercase md:text-5xl">Our Stats</h2>
-          <div className="mt-12 flex flex-wrap justify-center gap-8 md:gap-12">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="text-center"
-              >
-                <div className="font-heading text-4xl md:text-5xl">
-                  <RollingNumber
-                    target={stat.value}
-                    prefix={stat.prefix}
-                    suffix={stat.suffix}
-                    duration={2000 + index * 200}
-                  />
-              </div>
-                <p className="mt-2 text-sm text-gray-600">{stat.label}</p>
-              </motion.div>
-              ))}
-            </div>
-          </div>
-      </section>
-
-      {/* Featured Services Section (Dark) */}
-      <section className="section-dark py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <h2 className="font-heading text-center text-4xl uppercase md:text-5xl">Oklahoma City 1031 Exchange Solutions</h2>
-          <div className="mt-12">
-            <Carousel itemsPerView={3} viewAllHref="/services" viewAllText="View All">
-              {servicesData
-                .filter((service) => !/(?:three-property|200-percent|95-percent)/.test(service.slug))
-                .map((service) => (
-                <Link
-                  key={service.slug}
-                  href={service.route}
-                  className="group block"
-                >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-800">
-                    <Image
-                      src="/locations/oklahoma-city-ok-1031-exchange.jpg"
-                      alt={service.name}
-                      fill
-                      className="object-cover opacity-70 transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                    <span className="absolute bottom-4 right-4 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gray-900">
-                      Service
-                    </span>
-                      </div>
-                  <div className="mt-4">
-                    <h3 className="font-heading text-xl uppercase">{service.name}</h3>
-                    <p className="mt-2 text-sm text-gray-400 line-clamp-2">{service.short}</p>
-                    </div>
-                </Link>
-                ))}
-            </Carousel>
-            </div>
-            </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="relative overflow-hidden py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/locations/tulsa-ok-1031-exchange.jpg"
-            alt="Oklahoma landscape"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/60" />
-          </div>
-
-        <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div>
-              <h2 className="font-heading text-4xl uppercase text-white md:text-5xl">
-                See Why 1031
-                <br />
-                Exchanges Work
-                </h2>
-              <Link href="/contact?request=guide" className="btn-outline mt-8 border-white text-white hover:bg-white hover:text-gray-900">Get Free Oklahoma City 1031 Information</Link>
-              </div>
-
-            <div className="relative min-h-[280px]">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentBenefit}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.4 }}
-                  className="text-white"
-                >
-                  <div className="mb-4 text-5xl font-light text-white/40">&quot;</div>
-                  <p className="text-xl leading-relaxed md:text-2xl">
-                    {benefits[currentBenefit].description}
-                  </p>
-                  <p className="mt-6 text-sm font-semibold uppercase tracking-wider">
-                    {benefits[currentBenefit].title}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
-
-              <div className="mt-8 flex justify-end">
-                <div className="carousel-nav">
-                  <button onClick={prevBenefit} aria-label="Previous benefit">
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-                  <button onClick={nextBenefit} aria-label="Next benefit">
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
-            </div>
-          </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Neighborhoods Section (Dark) */}
-      <section className="section-dark py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <h2 className="font-heading text-center text-4xl uppercase md:text-5xl">
-            Neighborhoods
-                </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-            Browse our neighborhood guides below to learn more about each area.
-                </p>
-          <div className="mt-12">
-            <Carousel itemsPerView={3} viewAllHref="/service-areas" viewAllText="View All">
-              {locationsData.map((location) => (
-              <Link
-                  key={location.slug}
-                  href={location.route}
-                  className="group block"
-                >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-800">
-                    <Image
-                      src={location.heroImage || `/locations/${location.slug}-1031-exchange.jpg`}
-                      alt={location.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="font-heading text-xl uppercase">{location.name}</h3>
-                    <p className="mt-2 text-sm text-gray-400">
-                      1031 exchange services for {location.name} area investors.
-                    </p>
-                  </div>
-              </Link>
-              ))}
-            </Carousel>
-            </div>
-          </div>
-      </section>
-
-      {/* Real Estate Ownership Without Daily Operations Section (Light) */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <h2 className="font-heading text-center text-4xl uppercase md:text-5xl">
-            Property Types
-                </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-gray-600">
-            Explore available property types for 1031 exchange replacement.
-          </p>
-          <div className="mt-12">
-            <div className="relative">
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {propertyTypesData.slice(0, 6).map((propertyType) => (
-              <Link
-                    key={propertyType.slug}
-                    href={propertyType.route}
-                    className="group block"
-                  >
-                    <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                      {propertyType.heroImage ? (
-                        <Image
-                          src={propertyType.heroImage}
-                          alt={propertyType.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                        />
-                      ) : (
-                        <div className="flex h-full items-center justify-center bg-gray-200">
-                          <span className="font-heading text-xl text-gray-400">{propertyType.name}</span>
-            </div>
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      <span className="absolute bottom-4 right-4 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gray-900">
-                        Property Type
-                      </span>
-                    </div>
-                    <div className="mt-4">
-                      <h3 className="font-heading text-xl uppercase text-gray-900">{propertyType.name}</h3>
-                      <p className="mt-2 text-sm text-gray-600">
-                        Available nationwide for 1031 exchange.
-                      </p>
-                    </div>
-                </Link>
-                ))}
-              </div>
-              <div className="mt-8 text-center">
-                <Link href="/inventory" className="btn-outline">
-                  View All Property Types
-                </Link>
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Resources Section */}
-      <section className="bg-gray-50 py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <h2 className="font-heading text-center text-4xl uppercase md:text-5xl">
-            Industry Resources
-                </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-gray-600">
-            Stay informed with the latest guidance and market insights for 1031 exchanges.
-          </p>
-
-          <div className="mt-12 divide-y divide-gray-200 border-y border-gray-200 bg-white">
-            {resources.map((resource, index) => (
-              <motion.a
-                key={resource.title}
-                href={resource.href}
-                target={resource.href.startsWith("http") ? "_blank" : undefined}
-                rel={resource.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group flex items-center gap-6 p-6 transition-colors hover:bg-gray-50"
-              >
-                <div className="hidden h-20 w-28 flex-shrink-0 overflow-hidden bg-gray-100 md:block">
-                  <Image
-                    src="/oklahoma-city-hero.jpg"
-                    alt={resource.title}
-                    width={112}
-                    height={80}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-heading text-xl uppercase transition-colors group-hover:text-gray-600">
-                    {resource.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-600">{resource.description}</p>
-                  <p className="mt-2 text-xs uppercase tracking-wider text-gray-400">
-                    {resource.source} | {resource.date}
-                  </p>
-            </div>
-                <svg
-                  className="h-5 w-5 flex-shrink-0 text-gray-400 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </motion.a>
-            ))}
-                      </div>
-
-          <div className="mt-8 text-center">
-            <Link href="/blog" className="btn-outline">
-              View All Resources
-            </Link>
-                  </div>
-            </div>
-      </section>
-
-      {/* Work With Us CTA Section */}
-      <section className="relative overflow-hidden py-28 md:py-36">
-        <div className="absolute inset-0">
-          <Image
-            src="/locations/edmond-ok-1031-exchange.jpg"
-            alt="Oklahoma property"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          </div>
-
-        <div className="absolute left-1/2 top-12 h-16 w-px -translate-x-1/2 bg-white/30" />
-
-        <div className="relative z-10 mx-auto max-w-3xl px-6 text-center text-white md:px-8">
+        <div className="relative z-10 mx-auto flex min-h-[720px] max-w-6xl flex-col items-center justify-center px-6 pb-16 pt-28 text-center text-white md:h-full md:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-5xl"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/80 md:text-sm">
+              Free exchange guidance for Oklahoma property owners
+            </p>
+            <h1 className="mt-5 font-heading text-5xl leading-[0.96] tracking-wide sm:text-6xl md:text-7xl lg:text-8xl">
+              Turnkey 1031 Exchange Solutions
+              <span className="block">in Oklahoma City, OK</span>
+            </h1>
+            <p className="mx-auto mt-7 max-w-3xl text-base leading-relaxed text-white/90 md:text-xl">
+              Selling investment or inherited property? Get help organizing the exchange timeline, independent qualified intermediary, replacement property search and passive DST options.
+            </p>
+
+            <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+              <a
+                href={PHONE_HREF}
+                className="btn-white min-w-[230px]"
+              >
+                Call {PHONE_NUMBER}
+              </a>
+              <Link
+                href="/contact?request=properties"
+                className="btn-outline-light min-w-[230px]"
+              >
+                Get a Free Property List
+              </Link>
+            </div>
+
+            <div className="mx-auto mt-9 grid max-w-3xl gap-3 border-y border-white/25 py-5 text-left text-sm text-white/85 sm:grid-cols-3 sm:text-center">
+              <p>One call to organize the exchange</p>
+              <p>Direct and passive property options</p>
+              <p>Help before or after going under contract</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 md:py-28">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:px-8 lg:grid-cols-2 lg:gap-20">
+          <motion.div
+            initial={{ opacity: 0, x: -36 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative aspect-[4/3] overflow-hidden"
+          >
+            <Image
+              src="/oklahoma-city-hero.jpg"
+              alt="Oklahoma City investment property skyline"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 36 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-heading text-4xl uppercase md:text-5xl lg:text-6xl">
-              Work With Us
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-white/90">
-              Our team approaches Oklahoma&apos;s real estate landscape with an auspicious blend of 
-              experience, deep community ties and forward thinking. Contact us today to get 
-              started on your 1031 exchange journey with Oklahoma&apos;s leading experts.
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
+              A different kind of next property
             </p>
-            <Link href="/contact" className="btn-primary mt-8 bg-white text-gray-900 hover:bg-gray-100">Talk Through the Oklahoma City Sale</Link>
+            <h2 className="mt-4 font-heading text-4xl uppercase leading-none md:text-6xl">
+              Sell the Property Without Starting Another Management Job
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-gray-600">
+              Years of tenants, toilets, trash, repairs and vacancies can change what an owner wants from real estate. A 1031 exchange does not have to mean buying another property with the same workload.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-gray-600">
+              Compare another direct acquisition, a net-lease property and professionally managed DST interests against the same goals for income, control, diversification and time. Current DST offerings may provide access to institutional-quality real estate without personal property management, with some minimums beginning around $100,000.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link href="/contact?request=properties" className="btn-primary">
+                See No-Management Options
+              </Link>
+              <a href={PHONE_HREF} className="btn-outline">
+                Talk to an Exchange Expert
+              </a>
+            </div>
+            <p className="mt-5 text-xs leading-relaxed text-gray-500">
+              DST interests are private securities. Availability, projected income, fees, leverage, liquidity, investor eligibility and suitability vary by offering and require review through appropriately licensed professionals.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Let's Connect Floating Button */}
-      <button
-        onClick={() => setContactOpen(!contactOpen)}
-        className="connect-btn"
-        aria-label="Open contact options"
-      >
-        Let&apos;s Connect
-        <svg
-          className={`h-4 w-4 transition-transform ${contactOpen ? "rotate-180" : ""}`}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-        </svg>
-      </button>
-
-      {/* Contact Popup */}
-      <AnimatePresence>
-        {contactOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            className="fixed bottom-24 left-8 z-50 w-72 rounded-lg bg-white p-6 shadow-2xl"
-          >
-            <h3 className="font-heading text-xl uppercase">Get In Touch</h3>
-            <div className="mt-4 space-y-3 text-sm">
-              <a
-                href={PHONE_HREF}
-                className="flex items-center gap-3 text-gray-600 transition-colors hover:text-gray-900"
-              >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
-                {PHONE_NUMBER}
-              </a>
-              <a
-                href={`mailto:${EMAIL}`}
-                className="flex items-center gap-3 text-gray-600 transition-colors hover:text-gray-900"
-              >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-                {EMAIL}
-              </a>
-            <Link
-                href="/contact?request=properties"
-                className="btn-primary mt-4 w-full"
-                onClick={() => setContactOpen(false)}
-            >
-                Request the Oklahoma City Property List
-            </Link>
+      <section className="bg-gray-50 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
+              Start with the situation
+            </p>
+            <h2 className="mt-4 font-heading text-4xl uppercase leading-none md:text-6xl">
+              Whatever Stage the Sale Is In, Start Here
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-gray-600">
+              The right next step depends on what is being sold, when it may close and what the owner wants life after the sale to look like.
+            </p>
           </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+          <div className="-mx-6 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 md:mx-0 md:grid md:grid-cols-2 md:gap-px md:overflow-hidden md:border md:border-gray-200 md:bg-gray-200 md:p-0 lg:grid-cols-3">
+            {situations.map((situation) => (
+              <Link
+                key={situation.title}
+                href={situation.href}
+                className="group min-w-[84%] snap-start border border-gray-200 bg-white p-7 transition-colors hover:bg-gray-900 md:min-w-0 md:border-0 md:p-8"
+              >
+                <h3 className="font-heading text-2xl uppercase text-gray-900 transition-colors group-hover:text-white">
+                  {situation.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-600 transition-colors group-hover:text-white/75">
+                  {situation.text}
+                </p>
+                <span className="mt-6 inline-block text-xs font-semibold uppercase tracking-[0.18em] text-gray-900 transition-colors group-hover:text-white">
+                  Learn what to do next →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-dark py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/55">
+                One plan from sale to replacement
+              </p>
+              <h2 className="mt-4 font-heading text-4xl uppercase leading-none md:text-6xl">
+                Oklahoma City 1031 Exchange Solutions
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/65">
+                Get help bringing the transaction, required professionals and replacement-property decisions together without having to figure out every handoff alone.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a href={PHONE_HREF} className="btn-white">
+                Call {PHONE_NUMBER}
+              </a>
+              <Link href="/contact" className="btn-outline-light">
+                Get Free Guidance
+              </Link>
+            </div>
+          </div>
+
+          <div className="-mx-6 mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-4 md:mx-0 md:grid md:grid-cols-2 md:overflow-visible md:p-0 lg:grid-cols-3">
+            {solutions.map((solution) => (
+              <Link key={solution.title} href={solution.href} className="group block min-w-[84%] snap-start md:min-w-0">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gray-800">
+                  <Image
+                    src={solution.image}
+                    alt=""
+                    fill
+                    className="object-cover opacity-70 transition duration-500 group-hover:scale-105 group-hover:opacity-85"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
+                  <h3 className="absolute bottom-5 left-5 right-5 font-heading text-2xl uppercase text-white">
+                    {solution.title}
+                  </h3>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-white/60">
+                  {solution.text}
+                </p>
+                <span className="mt-4 inline-block text-xs font-semibold uppercase tracking-[0.18em] text-white">
+                  Explore this solution →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden py-24 md:py-36">
+        <Image
+          src="/locations/tulsa-ok-1031-exchange.jpg"
+          alt="Oklahoma commercial real estate"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="relative z-10 mx-auto max-w-7xl px-6 text-white md:px-8">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/65">
+              Passive replacement property
+            </p>
+            <h2 className="mt-4 font-heading text-5xl uppercase leading-none md:text-7xl">
+              Move Beyond Tenants, Toilets and Trash
+            </h2>
+            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/85">
+              A DST can give eligible investors fractional access to professionally managed real estate while the sponsor handles leasing, maintenance and property operations. That can make it useful for owners who want real estate exposure and projected income without another hands-on landlord role.
+            </p>
+            <ul className="mt-7 grid gap-3 text-sm text-white/85 sm:grid-cols-2">
+              <li className="border-l border-white/40 pl-4">No day-to-day property management</li>
+              <li className="border-l border-white/40 pl-4">Institutional-quality real estate</li>
+              <li className="border-l border-white/40 pl-4">Potential diversification across assets</li>
+              <li className="border-l border-white/40 pl-4">Some offering minimums near $100,000</li>
+            </ul>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link href="/contact?request=properties" className="btn-white">
+                Get the Current DST List
+              </Link>
+              <a href={PHONE_HREF} className="btn-outline-light">
+                Free Consultation: {PHONE_NUMBER}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
+                A clear path through the exchange
+              </p>
+              <h2 className="mt-4 font-heading text-4xl uppercase leading-none md:text-6xl">
+                Tell Us What You Are Selling and What You Want Next
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-gray-600">
+                A first conversation can begin with a property address, expected sale date and the reason for selling. From there, the exchange can be organized around the facts rather than a generic checklist.
+              </p>
+              <a href={PHONE_HREF} className="btn-primary mt-8">
+                First Exchange? Call {PHONE_NUMBER}
+              </a>
+            </div>
+
+            <div className="divide-y divide-gray-200 border-y border-gray-200">
+              {[
+                ["Clarify the sale", "Review ownership, use, expected timing, debt, equity and the professionals already involved."],
+                ["Define the next investment", "Write down income needs, control, management capacity, financing and the ownership paths worth comparing."],
+                ["Connect the exchange team", "Bring in the independent qualified intermediary and the tax, legal, brokerage or lending professionals the facts require."],
+                ["Compare primary and backup properties", "Evaluate direct real estate, net-lease opportunities and DST interests for risk, workload, financing and ability to close."],
+                ["Keep the closing path visible", "Track open questions, diligence, title, funding directions and advisor handoffs through replacement closing."],
+              ].map(([title, text]) => (
+                <div key={title} className="py-6 md:grid md:grid-cols-[220px_1fr] md:gap-8">
+                  <h3 className="font-heading text-2xl uppercase text-gray-900">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-600 md:mt-0">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
+              One sale objective, different ownership paths
+            </p>
+            <h2 className="mt-4 font-heading text-4xl uppercase leading-none md:text-6xl">
+              Compare the Property, Workload and Control Together
+            </h2>
+          </div>
+
+          <div className="-mx-6 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-px lg:overflow-hidden lg:border lg:border-gray-200 lg:bg-gray-200 lg:p-0">
+            {ownershipPaths.map((path) => (
+              <Link key={path.title} href={path.href} className="group min-w-[84%] snap-start border border-gray-200 bg-white p-8 transition-colors hover:bg-gray-900 md:p-10 lg:min-w-0 lg:border-0">
+                <h3 className="font-heading text-3xl uppercase text-gray-900 transition-colors group-hover:text-white">
+                  {path.title}
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-gray-600 transition-colors group-hover:text-white/70">
+                  {path.text}
+                </p>
+                <span className="mt-7 inline-block text-xs font-semibold uppercase tracking-[0.18em] text-gray-900 transition-colors group-hover:text-white">
+                  Compare this path →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-dark py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/55">
+                Local conversations, nationwide property options
+              </p>
+              <h2 className="mt-4 font-heading text-4xl uppercase leading-none md:text-6xl">
+                Oklahoma City Area 1031 Exchange Help
+              </h2>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link href="/service-areas" className="btn-outline-light">
+                View All Markets
+              </Link>
+              <Link href="/contact?request=properties" className="btn-white">
+                Get a Free Property List
+              </Link>
+            </div>
+          </div>
+
+          <div className="-mx-6 mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:p-0 lg:grid-cols-3">
+            {locationsData.slice(0, 6).map((location) => (
+              <Link key={location.slug} href={location.route} className="group block min-w-[84%] snap-start sm:min-w-0">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gray-800">
+                  <Image
+                    src={location.heroImage || "/locations/oklahoma-city-ok-1031-exchange.jpg"}
+                    alt={`${location.name} 1031 exchange help`}
+                    fill
+                    className="object-cover opacity-75 transition duration-500 group-hover:scale-105 group-hover:opacity-90"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <h3 className="absolute bottom-5 left-5 font-heading text-2xl uppercase text-white">
+                    {location.name}
+                  </h3>
+                </div>
+                <p className="mt-3 text-sm text-white/55">
+                  Sale planning, exchange guidance and replacement property options for {location.name} owners.
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
+              Useful information before the clock starts
+            </p>
+            <h2 className="mt-4 font-heading text-4xl uppercase leading-none md:text-6xl">
+              Free Oklahoma City 1031 Exchange Resources
+            </h2>
+          </div>
+
+          <div className="mt-12 divide-y divide-gray-200 border-y border-gray-200">
+            {guides.map((guide) => (
+              <Link
+                key={guide.title}
+                href={guide.href}
+                className="group grid gap-4 py-7 transition-colors md:grid-cols-[1fr_1.2fr_auto] md:items-center md:gap-8"
+              >
+                <h3 className="font-heading text-2xl uppercase text-gray-900">{guide.title}</h3>
+                <p className="text-sm leading-relaxed text-gray-600">{guide.text}</p>
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-900 group-hover:underline">
+                  {guide.label} →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-20 md:py-28">
+        <div className="mx-auto max-w-4xl px-6 md:px-8">
+          <div className="text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
+              Common questions from property owners
+            </p>
+            <h2 className="mt-4 font-heading text-4xl uppercase leading-none md:text-6xl">
+              Oklahoma City 1031 Exchange Questions
+            </h2>
+          </div>
+
+          <div className="mt-12 divide-y divide-gray-300 border-y border-gray-300">
+            {faqs.map((faq) => (
+              <details key={faq.question} className="group py-6">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-heading text-2xl uppercase text-gray-900">
+                  {faq.question}
+                  <span className="text-2xl font-light transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 max-w-3xl pr-10 text-sm leading-relaxed text-gray-600">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-dark py-20 md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-20">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/55">
+              Free exchange guidance
+            </p>
+            <h2 className="mt-4 font-heading text-5xl uppercase leading-none md:text-7xl">
+              One Call Can Organize the Next Step
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-white/70">
+              Share what is being sold, the expected closing date and what the next investment needs to accomplish. The conversation is free, whether the exchange is still being considered or the property is already under contract.
+            </p>
+            <a href={PHONE_HREF} className="btn-white mt-8">
+              Call {PHONE_NUMBER}
+            </a>
+            <p className="mt-6 text-xs leading-relaxed text-white/45">
+              Educational guidance and professional introductions only. Tax, legal, qualified-intermediary, brokerage, lending and securities work is handled by the appropriate independent professionals.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="mb-5 font-heading text-3xl uppercase text-white">
+              Contact Us Now for Free Exchange Guidance
+            </h3>
+            <ContactFormWrapper />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

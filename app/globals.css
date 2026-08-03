@@ -15,6 +15,14 @@ body {
   height: 100%;
 }
 
+.snap-x {
+  scrollbar-width: none;
+}
+
+.snap-x::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: #ffffff;
   color: #1a1a1a;
@@ -160,6 +168,26 @@ body {
 .btn-outline:hover {
   background-color: var(--color-dark);
   color: #ffffff;
+}
+
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.2s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #ffffff;
+  color: var(--color-dark);
 }
 
 .btn-white {
