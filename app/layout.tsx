@@ -72,6 +72,7 @@ export default function RootLayout({
         <Footer />
         <StickyCall phone={PHONE_NUMBER} />
         <Analytics />
+              <script src="/turnstile-contact.js" defer></script>
       </body>
     </html>
   );
